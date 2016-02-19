@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: bbb0a721d5744d741b545ac55e886972
+timeCreated: 1455920192
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: cuerpo_Player1
+    100002: pelo7_polySurface10
+    100004: pelo7_polySurface2
+    100006: pelo7_polySurface3
+    100008: pelo7_polySurface4
+    100010: pelo7_polySurface5
+    100012: pelo7_polySurface6
+    100014: pelo7_polySurface7
+    100016: pelo7_polySurface8
+    100018: pelo7_polySurface9
+    100020: Player1_audifono2
+    100022: Player1_gorra
+    100024: Player1_pelo1
+    100026: //RootNode
+    100028: polySurface1_pelo7
+    400000: cuerpo_Player1
+    400002: pelo7_polySurface10
+    400004: pelo7_polySurface2
+    400006: pelo7_polySurface3
+    400008: pelo7_polySurface4
+    400010: pelo7_polySurface5
+    400012: pelo7_polySurface6
+    400014: pelo7_polySurface7
+    400016: pelo7_polySurface8
+    400018: pelo7_polySurface9
+    400020: Player1_audifono2
+    400022: Player1_gorra
+    400024: Player1_pelo1
+    400026: //RootNode
+    400028: polySurface1_pelo7
+    2300000: cuerpo_Player1
+    2300002: pelo7_polySurface10
+    2300004: pelo7_polySurface2
+    2300006: pelo7_polySurface3
+    2300008: pelo7_polySurface4
+    2300010: pelo7_polySurface5
+    2300012: pelo7_polySurface6
+    2300014: pelo7_polySurface7
+    2300016: pelo7_polySurface8
+    2300018: pelo7_polySurface9
+    2300020: Player1_audifono2
+    2300022: Player1_gorra
+    2300024: Player1_pelo1
+    2300026: polySurface1_pelo7
+    3300000: cuerpo_Player1
+    3300002: pelo7_polySurface10
+    3300004: pelo7_polySurface2
+    3300006: pelo7_polySurface3
+    3300008: pelo7_polySurface4
+    3300010: pelo7_polySurface5
+    3300012: pelo7_polySurface6
+    3300014: pelo7_polySurface7
+    3300016: pelo7_polySurface8
+    3300018: pelo7_polySurface9
+    3300020: Player1_audifono2
+    3300022: Player1_gorra
+    3300024: Player1_pelo1
+    3300026: polySurface1_pelo7
+    4300000: cuerpo_Player1
+    4300002: pelo7_polySurface10
+    4300004: pelo7_polySurface2
+    4300006: pelo7_polySurface3
+    4300008: pelo7_polySurface4
+    4300010: pelo7_polySurface5
+    4300012: pelo7_polySurface6
+    4300014: pelo7_polySurface7
+    4300016: pelo7_polySurface8
+    4300018: pelo7_polySurface9
+    4300020: Player1_audifono2
+    4300022: Player1_gorra
+    4300024: Player1_pelo1
+    4300026: polySurface1_pelo7
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
