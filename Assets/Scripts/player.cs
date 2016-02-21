@@ -3,9 +3,9 @@ using System.Collections;
 
 public class player : MonoBehaviour {
 
-    public float playerSpeed=50;
+    public static float playerSpeed=50;
     private Vector3 dir;
-    public float jumpHeight = 70f;
+    public static float jumpHeight = 70f;
 
     public Rigidbody playerRigidBody;
     private bool isFalling = false;
