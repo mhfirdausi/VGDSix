@@ -9,7 +9,7 @@ public class player : MonoBehaviour {
 
     public Rigidbody playerRigidBody;
     private bool isFalling = false;
-    private int jumps;
+    public int jumps;
 
     void Start () {
         dir = Vector3.forward;
