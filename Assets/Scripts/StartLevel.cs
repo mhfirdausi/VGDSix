@@ -10,6 +10,9 @@ public class StartLevel : MonoBehaviour {
 	public Button futureButton;
 	public Canvas yeezyMenu;	
 	public Canvas futureMenu;
+	public Vector3 startPoint;
+	public Vector3 endPointEVOL;
+	public Canvas ScrollView;
 
 	void Start () {
 		beginButton = beginButton.GetComponent<Button> ();
@@ -19,6 +22,9 @@ public class StartLevel : MonoBehaviour {
 		futureMenu = futureMenu.GetComponent<Canvas> ();
 		yeezyMenu.enabled = false;
 		futureMenu.enabled = false;
+
+		startPoint = transform.position;
+		endPointEVOL = new Vector3(348, 0, 0);
 
 	}
 
@@ -30,6 +36,7 @@ public class StartLevel : MonoBehaviour {
 	public void futurePress() {
 		yeezyMenu.enabled = false;
 		futureMenu.enabled = true;
+		//ScrollView.transform.position = endPointEVOL;
 	}
 
 	public void loadYeezy()
@@ -41,6 +48,12 @@ public class StartLevel : MonoBehaviour {
 	public void loadFuture()
 	{
 		SceneManager.LoadScene ("EVOL");
+
+	}
+
+	public void exitGame()
+	{
+		Application.Quit ();
 
 	}
 }
