@@ -271,9 +271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee9fc9d0efd3d4600a0f3002efd8be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitPanel: {fileID: 0}
-  startButton: {fileID: 0}
-  exitButton: {fileID: 0}
+  exitPanel: {fileID: 870525632}
+  startButton: {fileID: 442562876}
+  exitButton: {fileID: 1538377138}
 --- !u!114 &219696627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ Transform:
   m_LocalScale: {x: 113.9, y: 5.44, z: 3.49}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &769775751
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &870525630
 MonoBehaviour:
   m_ObjectHideFlags: 0
