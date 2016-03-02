@@ -4,7 +4,6 @@ using System.Collections;
 public class BluePlate : MonoBehaviour {
 
     public Rigidbody playerRigidBody;
-    public float blueBoxJump = 150f;
 
     // Use this for initialization
     void Start () {
@@ -20,7 +19,7 @@ public class BluePlate : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, blueBoxJump, playerRigidBody.velocity.y);
+            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.y);
         }
     }
 }
