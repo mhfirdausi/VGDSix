@@ -14,6 +14,7 @@ GameObject:
   - 54: {fileID: 5467396}
   - 64: {fileID: 6466160}
   - 114: {fileID: 11433712}
+  - 114: {fileID: 11409554}
   m_Layer: 0
   m_Name: Speed Up Cube 1
   m_TagString: Untagged
@@ -198,6 +199,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11409554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951ac758b799d4146afdbeabf6e3772c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redMaterial: {fileID: 2100000, guid: 408445641a6e45b49be5921f6ceb6a7c, type: 2}
+  greenMaterial: {fileID: 2100000, guid: f54e305106ea77f45ad243803d9ca9a3, type: 2}
+  blueMaterial: {fileID: 2100000, guid: 1a886cea56b041f4293152d5903b2b35, type: 2}
 --- !u!114 &11433712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,8 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4442a7b18cbc24a9a13e85fe851955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedUpTimer: 3.5
-  speedUpMult: 2
+  playerRigidBody: {fileID: 5453016, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -233,6 +247,22 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: redMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 408445641a6e45b49be5921f6ceb6a7c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: greenMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: f54e305106ea77f45ad243803d9ca9a3, type: 2}
+    - target: {fileID: 0}
+      propertyPath: blueMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a886cea56b041f4293152d5903b2b35, type: 2}
+    - target: {fileID: 0}
+      propertyPath: playerRigidBody
+      value: 
+      objectReference: {fileID: 5453016, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 182210}

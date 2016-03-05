@@ -4,49 +4,61 @@ using System.Collections;
 public class RedPlate : MonoBehaviour
 {
 
-    private bool speedUp = false;
-    public float speedUpTimer = 3.5f;
-    public float speedUpMult = .5f;
+    private bool speedChange = false;
+    
     private float speedBoost;
+    private float speedNerf;
     private float baseSpeed;
 
+    public Rigidbody playerRigidBody;
 
     // Use this for initialization
     void Awake()
     {
         baseSpeed = player.playerSpeed;
-        speedBoost = player.playerSpeed * speedUpMult;
+        speedBoost = player.playerSpeed * player.speedUpMult;
+        speedNerf = player.playerSpeed * player.speedDownMult;
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (speedUp == true)
+        if (speedChange == true && player.greenPower == true)
         {
             player.playerSpeed = speedBoost;
-            StartCoroutine(speedUpTimerMethod());
+            StartCoroutine(speedChangeTimerMethod());
+        }
+        else if (speedChange == true)
+        {
+            player.playerSpeed = speedNerf;
+            StartCoroutine(speedChangeTimerMethod());
         }
     }
 
 
-    IEnumerator speedUpTimerMethod()
+    IEnumerator speedChangeTimerMethod()
     {
-        yield return new WaitForSeconds(speedUpTimer);
-        speedUpUndo();
+        yield return new WaitForSeconds(player.speedDownTimer);
+        speedChangeUndo();
     }
 
-    void speedUpUndo()
+    void speedChangeUndo()
     {
-        speedUp = false;
+        speedChange = false;
         player.playerSpeed = baseSpeed;
     }
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && player.bluePower == true)
         {
-            speedUp = true;
+            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.y);
+        }
+
+        else if (other.gameObject.CompareTag("Player"))
+        {
+            speedChange = true;
         }
     }
 

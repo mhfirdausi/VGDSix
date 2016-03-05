@@ -34,6 +34,7 @@ GameObject:
   - 54: {fileID: 5472260}
   - 64: {fileID: 6428088}
   - 114: {fileID: 11445344}
+  - 114: {fileID: 11468926}
   m_Layer: 0
   m_Name: Slow Cube 1
   m_TagString: Untagged
@@ -209,8 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a3af1540867dd40ad0844b4865df42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedUpTimer: 3.5
-  speedUpMult: 0.5
+  playerRigidBody: {fileID: 0}
 --- !u!114 &11445344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -222,6 +222,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0bf6e41666ef4c4cadbc0544ac6d742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11468926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c7b1706a11ec34ca349b14ff4f6f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redMaterial: {fileID: 2100000, guid: 408445641a6e45b49be5921f6ceb6a7c, type: 2}
+  greenMaterial: {fileID: 2100000, guid: f54e305106ea77f45ad243803d9ca9a3, type: 2}
+  blueMaterial: {fileID: 2100000, guid: 1a886cea56b041f4293152d5903b2b35, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -233,6 +247,18 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: redMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 408445641a6e45b49be5921f6ceb6a7c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: greenMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: f54e305106ea77f45ad243803d9ca9a3, type: 2}
+    - target: {fileID: 0}
+      propertyPath: blueMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a886cea56b041f4293152d5903b2b35, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 183650}

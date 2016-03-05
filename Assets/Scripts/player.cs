@@ -2,10 +2,24 @@
 using System.Collections;
 
 public class player : MonoBehaviour {
+    public static int points = 0;
 
-    public static float playerSpeed=50;
-    private Vector3 dir;
+    public static bool greenPower;
+    public static bool redPower;
+    public static bool bluePower;
+
+    public static float speedDownTimer = 3.5f;
+    public static float speedDownMult = .5f;
+    public static float speedUpTimer = 3.5f;
+    public static float speedUpMult = 2f;
+
+    public static float blueBoxJump = 150f;
+
+
+
+    public static float playerSpeed= 50f;
     public static float jumpHeight = 70f;
+    private Vector3 dir;
 
     public Rigidbody playerRigidBody;
     private bool isFalling = false;
