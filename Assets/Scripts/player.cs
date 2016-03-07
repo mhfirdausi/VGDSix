@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class player : MonoBehaviour {
@@ -17,7 +17,7 @@ public class player : MonoBehaviour {
 
 
 
-    public static float playerSpeed= 50f;
+    public static float playerSpeed= 23.8095238095f;
     public static float jumpHeight = 70f;
     private Vector3 dir;
 

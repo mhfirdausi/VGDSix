@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &110964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 418016}
+  - 114: {fileID: 11427418}
+  - 114: {fileID: 11455580}
+  - 114: {fileID: 11480314}
+  m_Layer: 0
+  m_Name: InAudio MusicSave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &418016
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11427418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1dd8bd3ebb3dc04c98cd0fb8f35eedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 616540903
+  _name: Music Root
+  _type: 0
+  _overrideParentMixerGroup: 0
+  _mixerGroup: {fileID: 0}
+  _minVolume: 1
+  _minPitch: 1
+  Filtered: 0
+  FoldedOut: 1
+  ScrollPosition: {x: 0, y: 0}
+  _children:
+  - {fileID: 11455580}
+  _parent: {fileID: 0}
+  runtimeVolume: 1
+  runtimePitch: 1
+  runtimeSolo: 0
+  runtimeMute: 0
+  _solo: 0
+  _mute: 0
+  _overrideParentBank: 1
+  _externalPlacement: 0
+  _bankLink: {fileID: 11460484, guid: 119a1922ffd85ff49a97b6153c0cc73a, type: 2}
+--- !u!114 &11455580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1dd8bd3ebb3dc04c98cd0fb8f35eedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1821351111
+  _name: Level Music
+  _type: 1
+  _overrideParentMixerGroup: 0
+  _mixerGroup: {fileID: 0}
+  _minVolume: 1
+  _minPitch: 1
+  Filtered: 0
+  FoldedOut: 1
+  ScrollPosition: {x: 0, y: 0}
+  _children:
+  - {fileID: 11480314}
+  _parent: {fileID: 11427418}
+  runtimeVolume: 1
+  runtimePitch: 1
+  runtimeSolo: 0
+  runtimeMute: 0
+  _solo: 0
+  _mute: 0
+  _overrideParentBank: 0
+  _externalPlacement: 0
+  _bankLink: {fileID: 11460484, guid: 119a1922ffd85ff49a97b6153c0cc73a, type: 2}
+--- !u!114 &11480314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d726591de3f2f5c4580160d2378446e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 192187249
+  _name: Sport N Bass
+  _type: 2
+  _overrideParentMixerGroup: 0
+  _mixerGroup: {fileID: 0}
+  _minVolume: 1
+  _minPitch: 1
+  Filtered: 0
+  FoldedOut: 0
+  ScrollPosition: {x: 0, y: 0}
+  _children: []
+  _parent: {fileID: 11455580}
+  runtimeVolume: 1
+  runtimePitch: 1
+  runtimeSolo: 0
+  runtimeMute: 0
+  _solo: 0
+  _mute: 0
+  _loop: 0
+  _autoStart: 0
+  _clips:
+  - {fileID: 8300000, guid: 982798de1739c104e819fdfad3a73979, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: _clips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _name
+      value: Sport N Bass
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 982798de1739c104e819fdfad3a73979, type: 3}
+    - target: {fileID: 0}
+      propertyPath: _loop
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 110964}
+  m_IsPrefabParent: 1
