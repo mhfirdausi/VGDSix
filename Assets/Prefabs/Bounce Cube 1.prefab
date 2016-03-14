@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11414124}
   m_Layer: 0
   m_Name: BluePlate
-  m_TagString: Untagged
+  m_TagString: BounceCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ GameObject:
   - 114: {fileID: 11467258}
   m_Layer: 0
   m_Name: Bounce Cube 1
-  m_TagString: Untagged
+  m_TagString: BounceCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,6 +247,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: BounceCube
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

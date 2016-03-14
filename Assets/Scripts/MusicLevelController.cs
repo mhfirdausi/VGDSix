@@ -5,9 +5,9 @@ public class MusicLevelController : MonoBehaviour {
 
     public InMusicGroup musicLevel;
 
+    public AudioSource currentSource;
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -19,15 +19,28 @@ public class MusicLevelController : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (musicLevel != null)
+            if (currentSource != null)
             {
-                InAudio.Music.Play(musicLevel);
+                currentSource.Play();
             }
             else
             {
-                Debug.Log("Music not assigned to scene.");
+                Debug.Log("ERROR: Audio source not found when playing.");
             }
         }
     }
-        
+    
+    public void stopPlayingSong()
+    {
+        Debug.Log("Need to stop!");
+        if (currentSource != null)
+        {
+            Debug.Log(currentSource.time);
+            currentSource.Stop();
+        }
+        else
+        {
+            Debug.Log("ERROR: Audio source not found when stopping.");
+        }
+    }    
 }

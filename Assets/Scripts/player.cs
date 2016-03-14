@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class player : MonoBehaviour {
     public static int points = 0;
@@ -16,7 +17,6 @@ public class player : MonoBehaviour {
     public static float blueBoxJump = 150f;
 
 
-
     public static float playerSpeed= 23.8095238095f;
     public static float jumpHeight = 70f;
     private Vector3 dir;
@@ -24,6 +24,9 @@ public class player : MonoBehaviour {
     public Rigidbody playerRigidBody;
     private bool isFalling = false;
     public int jumps;
+
+    public float levelBottom = 25f;
+    public UnityEvent onPlayerFall;
 
     void Start () {
         dir = Vector3.forward;
@@ -35,21 +38,36 @@ public class player : MonoBehaviour {
             playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x,  jumpHeight, playerRigidBody.velocity.y);
             jumps++;
         }
-
         isFalling = true;
-
-        
 	}
 
     void FixedUpdate()
     {
         float distanceToMove = playerSpeed * Time.deltaTime;
         transform.Translate(dir * distanceToMove);
+        if(transform.position.y <= levelBottom)
+        {
+            onPlayerFall.Invoke();
+            //TODO: Die, polished reset of the level
+            transform.position = new Vector3(0f, 65f, -50f); //Set starting spawn position as constant?
+        }
     }
 
     void OnCollisionStay()
     {
         isFalling = false;
         jumps = 0;
+    } 
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("BounceCube"))
+        {
+            Physics.gravity = new Vector3(0f, -350f, 0f);
+        }
+        else
+        {
+            Physics.gravity = new Vector3(0f, -200f, 0f);
+        }
     }
 }
