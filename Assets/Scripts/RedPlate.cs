@@ -1,5 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class RedPlate : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class RedPlate : MonoBehaviour
     private float baseSpeed;
 
     public Rigidbody playerRigidBody;
+
+    public UnityEvent hitRedBlock;
+    public UnityEvent resumeNormal;
 
     // Use this for initialization
     void Awake()
@@ -28,11 +32,13 @@ public class RedPlate : MonoBehaviour
         {
             player.playerSpeed = speedBoost;
             StartCoroutine(speedChangeTimerMethod());
+            hitRedBlock.Invoke();
         }
         else if (speedChange == true)
         {
             player.playerSpeed = speedNerf;
             StartCoroutine(speedChangeTimerMethod());
+            hitRedBlock.Invoke();
         }
     }
 
@@ -47,6 +53,7 @@ public class RedPlate : MonoBehaviour
     {
         speedChange = false;
         player.playerSpeed = baseSpeed;
+        resumeNormal.Invoke();
     }
 
     void OnCollisionEnter(Collision other)

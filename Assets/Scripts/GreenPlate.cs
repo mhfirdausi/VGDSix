@@ -1,5 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class GreenPlate : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class GreenPlate : MonoBehaviour
 
     public Rigidbody playerRigidBody;
 
+    public UnityEvent hitGreenBlock;
+    public UnityEvent resumeNormal;
 
     // Use this for initialization
     void Awake()
@@ -33,6 +36,7 @@ public class GreenPlate : MonoBehaviour
         {
             player.playerSpeed = speedBoost;
             StartCoroutine(speedChangeTimerMethod());
+            hitGreenBlock.Invoke();
         }
     }
 
@@ -46,6 +50,7 @@ public class GreenPlate : MonoBehaviour
     {
         speedChange = false;
         player.playerSpeed = baseSpeed;
+        resumeNormal.Invoke();
     }
 
     void OnCollisionEnter(Collision other)
