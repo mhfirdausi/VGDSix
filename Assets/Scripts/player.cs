@@ -33,10 +33,13 @@ public class player : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space) && (isFalling == false || jumps < 1))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x,  jumpHeight, playerRigidBody.velocity.y);
-            jumps++;
+           if (isFalling == false || jumps < 2)
+            {
+                playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, jumpHeight, playerRigidBody.velocity.y);
+                jumps++;
+            }
         }
         isFalling = true;
 	}
