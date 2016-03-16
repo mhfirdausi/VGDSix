@@ -14,7 +14,7 @@ public class player : MonoBehaviour {
     public static float speedUpTimer = 3.5f;
     public static float speedUpMult = 2f;
 
-    public static float blueBoxJump = 150f;
+    public static float blueBoxJump = 100f;
 
 
     public static float playerSpeed= 23.8095238095f;
@@ -64,13 +64,6 @@ public class player : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("BounceCube"))
-        {
-            Physics.gravity = new Vector3(0f, -350f, 0f);
-        }
-        else
-        {
-            Physics.gravity = new Vector3(0f, -200f, 0f);
-        }
+        
     }
 }
