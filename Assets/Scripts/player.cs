@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour {
     public static int points = 0;
@@ -28,8 +30,14 @@ public class player : MonoBehaviour {
     public float levelBottom = 25f;
     public UnityEvent onPlayerFall;
 
+	public Canvas deathMenu;
+	public Text countdown;
+
     void Start () {
         dir = Vector3.forward;
+		deathMenu = deathMenu.GetComponent<Canvas> (); 
+		deathMenu.enabled = false;
+		countdown.enabled = false;
 	}
 	
 	void Update () {
@@ -51,10 +59,22 @@ public class player : MonoBehaviour {
         if(transform.position.y <= levelBottom)
         {
             onPlayerFall.Invoke();
-            //TODO: Die, polished reset of the level
-            transform.position = new Vector3(0f, 65f, -50f); //Set starting spawn position as constant?
+			deathMenu.enabled = true;
+			countdown.enabled = true;
+			reload ();
+            //transform.position = new Vector3(0f, 65f, -50f); //Set starting spawn position as constant?
         }
     }
+
+	void reload() {
+		StartCoroutine ("Wait");
+	}
+
+	IEnumerator Wait()
+	{
+		yield return new WaitForSeconds(3.0f);
+		SceneManager.LoadScene ("Sport N Bass");
+	}
 
     void OnCollisionStay()
     {

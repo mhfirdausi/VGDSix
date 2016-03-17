@@ -12,6 +12,6 @@ public class Buttons : MonoBehaviour {
 	}
 	
 	public void LoadLevelSelect() {
-		SceneManager.LoadScene ("LevelSelect");
+		SceneManager.LoadScene ("LevelSel2");
 	}
 }

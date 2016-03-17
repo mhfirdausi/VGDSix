@@ -41,7 +41,7 @@ public class StartLevel : MonoBehaviour {
 
 	public void loadYeezy()
 	{
-		SceneManager.LoadScene ("TLOP");
+		SceneManager.LoadScene ("Sport N Bass");
 
 	}
 
