@@ -13,6 +13,7 @@ public class GreenPlate : MonoBehaviour
 
     public Rigidbody playerRigidBody;
 
+    public UnityEvent hitChangedToRed;
     public UnityEvent hitGreenBlock;
     public UnityEvent resumeNormal;
 
@@ -31,6 +32,7 @@ public class GreenPlate : MonoBehaviour
         {
             player.playerSpeed = speedNerf;
             StartCoroutine(speedChangeTimerMethod());
+            hitChangedToRed.Invoke();
         }
         else if (speedChange == true)
         {

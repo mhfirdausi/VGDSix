@@ -146,6 +146,18 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 89323530}
     m_Modifications:
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 436518, guid: ff3759872d9799340971658c8dbc6101, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.5000076
@@ -194,6 +206,74 @@ Prefab:
       propertyPath: playerRigidBody
       value: 
       objectReference: {fileID: 1233949261}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: slowDownSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: speedUpSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playSongNormal
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff3759872d9799340971658c8dbc6101, type: 2}
   m_IsPrefabParent: 0
@@ -254,6 +334,18 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1050362000}
     m_Modifications:
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 436518, guid: ff3759872d9799340971658c8dbc6101, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.5000076
@@ -302,6 +394,74 @@ Prefab:
       propertyPath: playerRigidBody
       value: 
       objectReference: {fileID: 1233949261}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: slowDownSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: speedUpSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playSongNormal
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff3759872d9799340971658c8dbc6101, type: 2}
   m_IsPrefabParent: 0
@@ -5851,6 +6011,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1050362000}
     m_Modifications:
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 440778, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.5000076
@@ -5899,6 +6063,46 @@ Prefab:
       propertyPath: playerRigidBody
       value: 
       objectReference: {fileID: 1233949261}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitRedBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitRedBlock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: slowDownSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playSongNormal
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: speedUpSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
   m_IsPrefabParent: 0
@@ -7240,6 +7444,22 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 469322, guid: 0bd6e5a065130ba49a01d68cde07bb82, type: 2}
   m_PrefabInternal: {fileID: 529067665}
+--- !u!1 &540197436 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 108172, guid: f1dedae29827cb74eb138c2c5715a126, type: 2}
+  m_PrefabInternal: {fileID: 498237475}
+--- !u!114 &540197439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 540197436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0af764d1ac0045b8959af452e2d9408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
 --- !u!1001 &541220030
 Prefab:
   m_ObjectHideFlags: 0
@@ -12930,6 +13150,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1976553842}
     m_Modifications:
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 440778, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.5000076
@@ -12994,6 +13218,30 @@ Prefab:
       propertyPath: playerRigidBody
       value: 
       objectReference: {fileID: 1233949261}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: speedUpSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438348, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
+      propertyPath: hitChangedToGreen.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
   m_IsPrefabParent: 0
@@ -17401,6 +17649,18 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 89323530}
     m_Modifications:
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 436518, guid: ff3759872d9799340971658c8dbc6101, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.5000076
@@ -17452,6 +17712,74 @@ Prefab:
     - target: {fileID: 182210, guid: ff3759872d9799340971658c8dbc6101, type: 2}
       propertyPath: m_Name
       value: Speed Up Cube 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: slowDownSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitChangedToRed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: speedUpSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: hitGreenBlock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playSongNormal
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489034, guid: ff3759872d9799340971658c8dbc6101, type: 2}
+      propertyPath: resumeNormal.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff3759872d9799340971658c8dbc6101, type: 2}

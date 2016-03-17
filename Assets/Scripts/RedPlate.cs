@@ -13,6 +13,7 @@ public class RedPlate : MonoBehaviour
 
     public Rigidbody playerRigidBody;
 
+    public UnityEvent hitChangedToGreen;
     public UnityEvent hitRedBlock;
     public UnityEvent resumeNormal;
 
@@ -32,7 +33,7 @@ public class RedPlate : MonoBehaviour
         {
             player.playerSpeed = speedBoost;
             StartCoroutine(speedChangeTimerMethod());
-            hitRedBlock.Invoke();
+            hitChangedToGreen.Invoke();
         }
         else if (speedChange == true)
         {
