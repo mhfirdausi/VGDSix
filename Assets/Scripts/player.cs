@@ -27,7 +27,7 @@ public class player : MonoBehaviour {
     private bool isFalling = false;
     public int jumps;
 
-    public float levelBottom = 25f;
+    public float levelBottom = 30f;
     public UnityEvent onPlayerFall;
     public UnityEvent onPlayerQuit;
 
@@ -42,7 +42,22 @@ public class player : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        //jetpack
+        if (Input.GetKey("z"))
+        {
+            if (playerRigidBody.velocity.y < -.01)
+            {
+                playerRigidBody.velocity += playerRigidBody.transform.up * 9;
+            }
+            else
+            {
+                playerRigidBody.velocity += playerRigidBody.transform.up * 4;
+            }
+        }
+
+        //jump
+        if (Input.GetKeyDown(KeyCode.Space) && !(Input.GetKey("z")))
         {
            if (isFalling == false || jumps < 2)
             {
