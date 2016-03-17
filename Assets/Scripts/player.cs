@@ -29,6 +29,7 @@ public class player : MonoBehaviour {
 
     public float levelBottom = 25f;
     public UnityEvent onPlayerFall;
+    public UnityEvent onPlayerQuit;
 
 	public Canvas deathMenu;
 	public Text countdown;
@@ -48,6 +49,12 @@ public class player : MonoBehaviour {
                 playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, jumpHeight, playerRigidBody.velocity.y);
                 jumps++;
             }
+        }
+        //Temporary code to allow us to stop the game
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            onPlayerQuit.Invoke();
+            SceneManager.LoadScene("Start");
         }
         isFalling = true;
 	}

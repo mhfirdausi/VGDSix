@@ -5241,6 +5241,10 @@ Prefab:
       propertyPath: onPlayerFall.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11417438, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+      propertyPath: onPlayerQuit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 486254, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5349,6 +5353,26 @@ Prefab:
       propertyPath: countdown
       value: 
       objectReference: {fileID: 336250989}
+    - target: {fileID: 11417438, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+      propertyPath: onPlayerQuit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417438, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+      propertyPath: onPlayerQuit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417438, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+      propertyPath: onPlayerQuit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 313946517}
+    - target: {fileID: 11417438, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+      propertyPath: onPlayerQuit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: stopPlayingSong
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417438, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+      propertyPath: onPlayerQuit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
   m_IsPrefabParent: 0
