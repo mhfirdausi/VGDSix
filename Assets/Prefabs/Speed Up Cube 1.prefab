@@ -235,7 +235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4442a7b18cbc24a9a13e85fe851955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRigidBody: {fileID: 5453016, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+  playerRigidBody: {fileID: 0}
+  hitChangedToRed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   hitGreenBlock:
     m_PersistentCalls:
       m_Calls: []
@@ -272,7 +277,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: playerRigidBody
       value: 
-      objectReference: {fileID: 5453016, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
       value: 5

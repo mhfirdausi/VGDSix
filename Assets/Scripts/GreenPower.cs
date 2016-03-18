@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class GreenPower : MonoBehaviour {
-    public int greenPowerTimer=10;
+    public int greenPowerTimer=5;
 
 	// Use this for initialization
 	void Start () {

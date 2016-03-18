@@ -11,10 +11,10 @@ public class player : MonoBehaviour {
     public static bool redPower;
     public static bool bluePower;
 
-    public static float speedDownTimer = 3.5f;
+    public static float speedDownTimer = 1.5f;
     public static float speedDownMult = .5f;
-    public static float speedUpTimer = 3.5f;
-    public static float speedUpMult = 2f;
+    public static float speedUpTimer = 1.5f;
+    public static float speedUpMult = 1.5f;
 
     public static float blueBoxJump = 100f;
 

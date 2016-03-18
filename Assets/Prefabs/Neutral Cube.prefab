@@ -15,6 +15,7 @@ GameObject:
   - 64: {fileID: 6435608}
   - 114: {fileID: 11422774}
   - 114: {fileID: 11427106}
+  - 114: {fileID: 11410758}
   m_Layer: 0
   m_Name: Neutral Cube
   m_TagString: Untagged
@@ -34,6 +35,7 @@ GameObject:
   - 65: {fileID: 6595160}
   - 23: {fileID: 2308420}
   - 54: {fileID: 5474986}
+  - 114: {fileID: 11482064}
   m_Layer: 0
   m_Name: plate
   m_TagString: Untagged
@@ -198,6 +200,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11410758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7028f560874004a861eec3f046a0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redMaterial: {fileID: 2100000, guid: 408445641a6e45b49be5921f6ceb6a7c, type: 2}
+  greenMaterial: {fileID: 2100000, guid: f54e305106ea77f45ad243803d9ca9a3, type: 2}
+  blueMaterial: {fileID: 2100000, guid: 1a886cea56b041f4293152d5903b2b35, type: 2}
+  greyMaterial: {fileID: 2100000, guid: 0818a81a168ffba4d877ee6d16762086, type: 2}
 --- !u!114 &11422774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,6 +241,33 @@ MonoBehaviour:
   slow: {fileID: 183650, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
   speed: {fileID: 182210, guid: ff3759872d9799340971658c8dbc6101, type: 2}
   bounce: {fileID: 138544, guid: e5d622eee0c5db343830398b8b50665a, type: 2}
+--- !u!114 &11482064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fbe68a803dddbb4ca415486e6e54c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRigidBody: {fileID: 5453016, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+  hitChangedToRed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  hitChangedToGreen:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  resumeNormal:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -233,7 +277,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: prefab
@@ -271,6 +315,26 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: redMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 408445641a6e45b49be5921f6ceb6a7c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: greenMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: f54e305106ea77f45ad243803d9ca9a3, type: 2}
+    - target: {fileID: 0}
+      propertyPath: blueMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a886cea56b041f4293152d5903b2b35, type: 2}
+    - target: {fileID: 0}
+      propertyPath: greyMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 0818a81a168ffba4d877ee6d16762086, type: 2}
+    - target: {fileID: 0}
+      propertyPath: playerRigidBody
+      value: 
+      objectReference: {fileID: 5453016, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 146882}
