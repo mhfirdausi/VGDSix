@@ -4,7 +4,6 @@ using UnityEngine.Events;
 
 public class GreyPlate : MonoBehaviour
 {
-
     private bool speedChange = false;
 
     private float speedBoost;
@@ -36,6 +35,7 @@ public class GreyPlate : MonoBehaviour
         }
         else if (speedChange == true && player.greenPower == true)
         {
+            Debug.Log("speedchange");
             player.playerSpeed = speedBoost;
             StartCoroutine(speedChangeTimerMethod());
             hitChangedToGreen.Invoke();
@@ -61,7 +61,7 @@ public class GreyPlate : MonoBehaviour
         {
             playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.y);
         }
-        else if (other.gameObject.CompareTag("Player") && (player.bluePower == true || player.redPower == true))
+        else if (other.gameObject.CompareTag("Player") && (player.greenPower == true || player.redPower == true))
         {
             speedChange = true;
         }
