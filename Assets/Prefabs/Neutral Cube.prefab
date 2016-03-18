@@ -37,7 +37,7 @@ GameObject:
   - 54: {fileID: 5474986}
   - 114: {fileID: 11482064}
   m_Layer: 0
-  m_Name: plate
+  m_Name: NeutralPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,6 +335,10 @@ Prefab:
       propertyPath: playerRigidBody
       value: 
       objectReference: {fileID: 5453016, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Name
+      value: NeutralPlate
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 146882}

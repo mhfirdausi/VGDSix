@@ -3,6 +3,10 @@ using System.Collections;
 
 public class MusicLevelController : MonoBehaviour {
 
+    private bool showWaveform;
+    private bool isPaused;
+
+    private SpriteRenderer ren; 
     public InMusicGroup musicLevel;
 
     public float levelSize;
@@ -10,11 +14,43 @@ public class MusicLevelController : MonoBehaviour {
     public AudioSource currentSource;
 	// Use this for initialization
 	void Start () {
+        showWaveform = false;
+        isPaused = false;
+        ren = this.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	    
+        //pause
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (!isPaused)
+            {
+                Time.timeScale = 0f;
+                isPaused = true;
+                currentSource.Pause();
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                isPaused = false;
+                currentSource.UnPause();
+            }
+        }
+        //debug: show waveform
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            if(!showWaveform)
+            {
+                ren.enabled = true;
+                showWaveform = true;
+            }
+            else
+            {
+                ren.enabled = false;
+                showWaveform = false;
+            }
+        }
 	}
 
     void OnTriggerEnter(Collider other)

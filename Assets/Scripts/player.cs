@@ -34,7 +34,9 @@ public class player : MonoBehaviour {
 	public Canvas deathMenu;
 	public Text countdown;
 
+
     void Start () {
+        Time.timeScale = 1f;
         dir = Vector3.forward;
 		deathMenu = deathMenu.GetComponent<Canvas> (); 
 		deathMenu.enabled = false;
@@ -65,6 +67,8 @@ public class player : MonoBehaviour {
                 jumps++;
             }
         }
+
+        
         //Temporary code to allow us to stop the game
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -83,8 +87,7 @@ public class player : MonoBehaviour {
             onPlayerFall.Invoke();
 			deathMenu.enabled = true;
 			countdown.enabled = true;
-			reload ();
-            //transform.position = new Vector3(0f, 65f, -50f); //Set starting spawn position as constant?
+            reload ();
         }
     }
 
