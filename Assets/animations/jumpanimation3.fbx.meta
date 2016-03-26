@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: ac43939c8145a344ca4b16a402feb2e0
+timeCreated: 1459012775
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: be_clavicle
+    100002: be_clavicle1
+    100004: be_l_ankle01
+    100006: be_pelvis01
+    100008: be_r_ankle01
+    100010: bn_chest01
+    100012: bn_chin01
+    100014: bn_l_ankle01
+    100016: bn_l_chin01
+    100018: bn_l_clavic01
+    100020: bn_l_foot
+    100022: bn_l_tight01
+    100024: bn_neck01
+    100026: bn_pelvis01
+    100028: bn_r_ankle01
+    100030: bn_r_chin01
+    100032: bn_r_clavic01
+    100034: bn_r_foot
+    100036: bn_r_tight01
+    100038: bn_torso01
+    100040: body
+    100042: character
+    100044: elbowlcurve
+    100046: elbowrcurve
+    100048: foot_l_curve
+    100050: foot_r_curve
+    100052: hair
+    100054: hair3
+    100056: hair4
+    100058: hair5
+    100060: hair6
+    100062: hair7
+    100064: hand_lcurve
+    100066: hand_rcurve
+    100068: hat
+    100070: head1
+    100072: headCurve
+    100074: headp1
+    100076: headp2
+    100078: headp3
+    100080: hipscurve
+    100082: joint4
+    100084: joint4 1
+    100086: joint5
+    100088: joint5 1
+    100090: joint6
+    100092: //RootNode
+    100094: skeletohroot
+    100096: tightcurve
+    400000: be_clavicle
+    400002: be_clavicle1
+    400004: be_l_ankle01
+    400006: be_pelvis01
+    400008: be_r_ankle01
+    400010: bn_chest01
+    400012: bn_chin01
+    400014: bn_l_ankle01
+    400016: bn_l_chin01
+    400018: bn_l_clavic01
+    400020: bn_l_foot
+    400022: bn_l_tight01
+    400024: bn_neck01
+    400026: bn_pelvis01
+    400028: bn_r_ankle01
+    400030: bn_r_chin01
+    400032: bn_r_clavic01
+    400034: bn_r_foot
+    400036: bn_r_tight01
+    400038: bn_torso01
+    400040: body
+    400042: character
+    400044: elbowlcurve
+    400046: elbowrcurve
+    400048: foot_l_curve
+    400050: foot_r_curve
+    400052: hair
+    400054: hair3
+    400056: hair4
+    400058: hair5
+    400060: hair6
+    400062: hair7
+    400064: hand_lcurve
+    400066: hand_rcurve
+    400068: hat
+    400070: head1
+    400072: headCurve
+    400074: headp1
+    400076: headp2
+    400078: headp3
+    400080: hipscurve
+    400082: joint4
+    400084: joint4 1
+    400086: joint5
+    400088: joint5 1
+    400090: joint6
+    400092: //RootNode
+    400094: skeletohroot
+    400096: tightcurve
+    4300000: body
+    4300002: hat
+    4300004: hair
+    4300006: headp1
+    4300008: head1
+    4300010: headp2
+    4300012: hair3
+    4300014: hair4
+    4300016: hair5
+    4300018: headp3
+    4300020: hair6
+    4300022: hair7
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+    13700002: hair
+    13700004: hair3
+    13700006: hair4
+    13700008: hair5
+    13700010: hair6
+    13700012: hair7
+    13700014: hat
+    13700016: head1
+    13700018: headp1
+    13700020: headp2
+    13700022: headp3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

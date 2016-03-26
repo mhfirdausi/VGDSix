@@ -1,39 +1,39 @@
 fileFormatVersion: 2
-guid: 0c715e7c2a990a142bb561c14c4b7018
-timeCreated: 1458100747
+guid: 68fed5c915eddc748b9aacf07fd80328
+timeCreated: 1459012774
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: be_clavicle
     100002: be_clavicle1
-    100004: be_head01
-    100006: be_l_ankle01
-    100008: be_l_toe01
-    100010: be_pelvis01
-    100012: be_r_ankle01
-    100014: be_r_toe01
-    100016: bn_chest01
-    100018: bn_chin01
-    100020: bn_l_ankle01
-    100022: bn_l_chin01
-    100024: bn_l_clavic01
-    100026: bn_l_foot
-    100028: bn_l_tight01
-    100030: bn_neck01
-    100032: bn_pelvis01
-    100034: bn_r_ankle01
-    100036: bn_r_chin01
-    100038: bn_r_clavic01
-    100040: bn_r_foot
-    100042: bn_r_tight01
-    100044: bn_torso01
-    100046: body
-    100048: character
-    100050: eye1
-    100052: eye2
-    100054: foot_l_curve
-    100056: foot_r_curve
+    100004: be_l_ankle01
+    100006: be_pelvis01
+    100008: be_r_ankle01
+    100010: bn_chest01
+    100012: bn_chin01
+    100014: bn_l_ankle01
+    100016: bn_l_chin01
+    100018: bn_l_clavic01
+    100020: bn_l_foot
+    100022: bn_l_tight01
+    100024: bn_neck01
+    100026: bn_pelvis01
+    100028: bn_r_ankle01
+    100030: bn_r_chin01
+    100032: bn_r_clavic01
+    100034: bn_r_foot
+    100036: bn_r_tight01
+    100038: bn_torso01
+    100040: body
+    100042: character
+    100044: elbow_curve
+    100046: elbow_lcurve
+    100048: eye1
+    100050: eye2
+    100052: foot_l_curve
+    100054: foot_r_curve
+    100056: //RootNode
     100058: hair
     100060: hair3
     100062: hair4
@@ -44,49 +44,46 @@ ModelImporter:
     100072: hand_rcurve
     100074: hat
     100076: head1
-    100078: headCurve
+    100078: Head_curve
     100080: headp1
     100082: headp2
     100084: headp3
-    100086: hipscurve
-    100088: joint4
-    100090: joint4 1
-    100092: joint5
-    100094: joint5 1
-    100096: joint6
-    100098: joint6 1
-    100100: //RootNode
-    100102: skeletohroot
-    100104: tightcurve
+    100086: joint4
+    100088: joint4 1
+    100090: joint5
+    100092: joint5 1
+    100094: joint6
+    100096: skeletohroot
+    100098: tight_curve
     400000: be_clavicle
     400002: be_clavicle1
-    400004: be_head01
-    400006: be_l_ankle01
-    400008: be_l_toe01
-    400010: be_pelvis01
-    400012: be_r_ankle01
-    400014: be_r_toe01
-    400016: bn_chest01
-    400018: bn_chin01
-    400020: bn_l_ankle01
-    400022: bn_l_chin01
-    400024: bn_l_clavic01
-    400026: bn_l_foot
-    400028: bn_l_tight01
-    400030: bn_neck01
-    400032: bn_pelvis01
-    400034: bn_r_ankle01
-    400036: bn_r_chin01
-    400038: bn_r_clavic01
-    400040: bn_r_foot
-    400042: bn_r_tight01
-    400044: bn_torso01
-    400046: body
-    400048: character
-    400050: eye1
-    400052: eye2
-    400054: foot_l_curve
-    400056: foot_r_curve
+    400004: be_l_ankle01
+    400006: be_pelvis01
+    400008: be_r_ankle01
+    400010: bn_chest01
+    400012: bn_chin01
+    400014: bn_l_ankle01
+    400016: bn_l_chin01
+    400018: bn_l_clavic01
+    400020: bn_l_foot
+    400022: bn_l_tight01
+    400024: bn_neck01
+    400026: bn_pelvis01
+    400028: bn_r_ankle01
+    400030: bn_r_chin01
+    400032: bn_r_clavic01
+    400034: bn_r_foot
+    400036: bn_r_tight01
+    400038: bn_torso01
+    400040: body
+    400042: character
+    400044: elbow_curve
+    400046: elbow_lcurve
+    400048: eye1
+    400050: eye2
+    400052: foot_l_curve
+    400054: foot_r_curve
+    400056: //RootNode
     400058: hair
     400060: hair3
     400062: hair4
@@ -97,20 +94,17 @@ ModelImporter:
     400072: hand_rcurve
     400074: hat
     400076: head1
-    400078: headCurve
+    400078: Head_curve
     400080: headp1
     400082: headp2
     400084: headp3
-    400086: hipscurve
-    400088: joint4
-    400090: joint4 1
-    400092: joint5
-    400094: joint5 1
-    400096: joint6
-    400098: joint6 1
-    400100: //RootNode
-    400102: skeletohroot
-    400104: tightcurve
+    400086: joint4
+    400088: joint4 1
+    400090: joint5
+    400092: joint5 1
+    400094: joint6
+    400096: skeletohroot
+    400098: tight_curve
     4300000: body
     4300002: hat
     4300004: hair
