@@ -26,6 +26,7 @@ public class player : MonoBehaviour {
     public Rigidbody playerRigidBody;
     private bool isFalling = false;
     public int jumps;
+    public int heat;
 
     public float levelBottom = 30f;
     public UnityEvent onPlayerFall;
@@ -41,21 +42,30 @@ public class player : MonoBehaviour {
 		deathMenu = deathMenu.GetComponent<Canvas> (); 
 		deathMenu.enabled = false;
 		countdown.enabled = false;
+
+        heat = 0;
 	}
-	
-	void Update () {
+
+    void Update() {
 
         //jetpack
-        if (Input.GetKey("z"))
+        Debug.Log("heat =" + heat);
+        if (Input.GetKey("z") && heat < 100)
         {
             if (playerRigidBody.velocity.y < -.01)
             {
                 playerRigidBody.velocity += playerRigidBody.transform.up * 9;
+                heat = heat + 2;
             }
             else
             {
                 playerRigidBody.velocity += playerRigidBody.transform.up * 4;
+                heat = heat + 2;
             }
+        }
+        if (!Input.GetKey("z") && heat >= 0)
+        { 
+        heat--;
         }
 
         //jump
@@ -93,6 +103,7 @@ public class player : MonoBehaviour {
 
 	void reload() {
 		StartCoroutine ("Wait");
+        heat = 0;
 	}
 
 	IEnumerator Wait()

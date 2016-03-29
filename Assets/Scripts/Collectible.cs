@@ -21,7 +21,6 @@ public class Collectible : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             player.points = player.points + 5;
-            Debug.Log("points = " + player.points);
             Destroy(gameObject);
         }
     }
