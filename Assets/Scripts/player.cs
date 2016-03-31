@@ -26,7 +26,7 @@ public class player : MonoBehaviour {
     public Rigidbody playerRigidBody;
     private bool isFalling = false;
     public int jumps;
-    public int heat;
+    public static float heat;
 
     public float levelBottom = 30f;
     public UnityEvent onPlayerFall;

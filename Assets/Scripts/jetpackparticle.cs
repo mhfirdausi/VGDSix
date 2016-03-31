@@ -12,7 +12,7 @@ public class jetpackparticle : MonoBehaviour {
     void Update()
     {
         gameObject.GetComponent<ParticleSystem>().enableEmission = false;
-        if (Input.GetKey("z"))
+        if (Input.GetKey("z") && player.heat <100)
         {
             gameObject.GetComponent<ParticleSystem>().enableEmission = true;
         }
