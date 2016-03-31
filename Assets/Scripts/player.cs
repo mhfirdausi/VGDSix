@@ -65,7 +65,7 @@ public class player : MonoBehaviour {
         }
         if (!Input.GetKey("z") && heat >= 0)
         { 
-        heat--;
+        heat=heat - .6f;
         }
 
         //jump
