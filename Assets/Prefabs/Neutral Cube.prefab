@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11422774}
   - 114: {fileID: 11427106}
   - 114: {fileID: 11410758}
+  - 114: {fileID: 11427252}
   m_Layer: 0
   m_Name: Neutral Cube
   m_TagString: Untagged
@@ -241,6 +242,17 @@ MonoBehaviour:
   slow: {fileID: 183650, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
   speed: {fileID: 182210, guid: ff3759872d9799340971658c8dbc6101, type: 2}
   bounce: {fileID: 138544, guid: e5d622eee0c5db343830398b8b50665a, type: 2}
+--- !u!114 &11427252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b71fb20612fd34584d20c13c0c52f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11482064
 MonoBehaviour:
   m_ObjectHideFlags: 1

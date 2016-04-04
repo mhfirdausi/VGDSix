@@ -49,7 +49,7 @@ public class player : MonoBehaviour {
     void Update() {
 
         //jetpack
-        Debug.Log("heat =" + heat);
+        
         if (Input.GetKey("z") && heat < 100)
         {
             if (playerRigidBody.velocity.y < -.01)
@@ -62,10 +62,12 @@ public class player : MonoBehaviour {
                 playerRigidBody.velocity += playerRigidBody.transform.up * 4;
                 heat = heat + 2;
             }
+            Debug.Log("heat =" + heat);
         }
         if (!Input.GetKey("z") && heat >= 0)
         { 
-        heat=heat - .6f;
+            heat=heat - .6f;
+            Debug.Log("heat =" + heat);
         }
 
         //jump
