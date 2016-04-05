@@ -121,6 +121,7 @@ ModelImporter:
     4300026: hair7
     7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: body
     13700002: eye1
     13700004: eye2
@@ -155,7 +156,137 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character
+        weight: 1
+      - path: character/body
+        weight: 1
+      - path: character/eye1
+        weight: 1
+      - path: character/eye2
+        weight: 1
+      - path: character/hair
+        weight: 1
+      - path: character/hair3
+        weight: 1
+      - path: character/hair4
+        weight: 1
+      - path: character/hair5
+        weight: 1
+      - path: character/hair6
+        weight: 1
+      - path: character/hair7
+        weight: 1
+      - path: character/hat
+        weight: 1
+      - path: character/head1
+        weight: 1
+      - path: character/headp1
+        weight: 1
+      - path: character/headp2
+        weight: 1
+      - path: character/headp3
+        weight: 1
+      - path: elbow_curve
+        weight: 1
+      - path: elbow_lcurve
+        weight: 1
+      - path: foot_l_curve
+        weight: 1
+      - path: foot_r_curve
+        weight: 1
+      - path: hand_lcurve
+        weight: 1
+      - path: hand_rcurve
+        weight: 1
+      - path: Head_curve
+        weight: 1
+      - path: skeletohroot
+        weight: 1
+      - path: skeletohroot/bn_pelvis01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/be_pelvis01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01/bn_l_chin01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01/bn_l_chin01/be_l_ankle01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01/bn_l_chin01/be_l_ankle01/bn_l_ankle01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01/bn_l_chin01/be_l_ankle01/bn_l_ankle01/bn_l_foot
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01/bn_r_chin01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01/bn_r_chin01/be_r_ankle01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01/bn_r_chin01/be_r_ankle01/bn_r_ankle01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01/bn_r_chin01/be_r_ankle01/bn_r_ankle01/bn_r_foot
+        weight: 1
+      - path: skeletohroot/bn_torso01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle/bn_l_clavic01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle/bn_l_clavic01/joint4
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle/bn_l_clavic01/joint4/joint5
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle/bn_l_clavic01/joint4/joint5/joint6
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle1
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle1/bn_r_clavic01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle1/bn_r_clavic01/joint4
+          1
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle1/bn_r_clavic01/joint4
+          1/joint5 1
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/bn_neck01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/bn_neck01/bn_chin01
+        weight: 1
+      - path: tight_curve
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -193,7 +324,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
