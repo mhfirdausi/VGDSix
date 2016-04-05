@@ -14,7 +14,7 @@ public class player : MonoBehaviour {
     public static float speedDownTimer = 1.5f;
     public static float speedDownMult = .5f;
     public static float speedUpTimer = 1.5f;
-    public static float speedUpMult = 1.5f;
+    public static float speedUpMult = 1.3f;
 
     public static float blueBoxJump = 100f;
 
@@ -88,7 +88,8 @@ public class player : MonoBehaviour {
             SceneManager.LoadScene("Start");
         }
         isFalling = true;
-	}
+        
+    }
 
     void FixedUpdate()
     {
