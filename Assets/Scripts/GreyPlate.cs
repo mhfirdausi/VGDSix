@@ -22,6 +22,8 @@ public class GreyPlate : MonoBehaviour
         baseSpeed = player.playerSpeed;
         speedBoost = player.playerSpeed * player.speedUpMult;
         speedNerf = player.playerSpeed * player.speedDownMult;
+
+        playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -67,4 +69,11 @@ public class GreyPlate : MonoBehaviour
         }
     }
 
+    /*
+    bool inBounds()
+    {
+        if (GameObject.Find("playerCylinder").transform.position.y < (10));
+        return true;
+    }
+    */
 }
