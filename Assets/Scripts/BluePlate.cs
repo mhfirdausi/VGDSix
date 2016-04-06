@@ -7,7 +7,7 @@ public class BluePlate : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	
+        playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame

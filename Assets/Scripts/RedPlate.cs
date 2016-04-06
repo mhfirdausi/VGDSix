@@ -23,6 +23,7 @@ public class RedPlate : MonoBehaviour
         baseSpeed = player.playerSpeed;
         speedBoost = player.playerSpeed * player.speedUpMult;
         speedNerf = player.playerSpeed * player.speedDownMult;
+        playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
 
     }
 

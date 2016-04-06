@@ -23,6 +23,7 @@ public class GreenPlate : MonoBehaviour
         baseSpeed = player.playerSpeed;
         speedBoost = player.playerSpeed * player.speedUpMult;
         speedNerf = player.playerSpeed * player.speedDownMult;
+        playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
