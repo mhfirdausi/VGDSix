@@ -26,7 +26,7 @@ public class player : MonoBehaviour {
     private Vector3 dir;
 
     public Rigidbody playerRigidBody;
-    private bool isFalling = false;
+    public static bool isFalling = false;
     public int jumps;
     public static float heat;
 
