@@ -55,14 +55,14 @@ public class player : MonoBehaviour {
         
         if (Input.GetKey("z") && heat < 100)
         {
-            if (playerRigidBody.velocity.y < -.01)
+            if (playerRigidBody.velocity.y < 0)
             {
-                playerRigidBody.velocity += playerRigidBody.transform.up * 9;
+                playerRigidBody.velocity = playerRigidBody.velocity + playerRigidBody.transform.up * 9f;
                 heat = heat + 2;
             }
-            else
+            else if (playerRigidBody.velocity.y >= 0)
             {
-                playerRigidBody.velocity += playerRigidBody.transform.up * 4;
+                playerRigidBody.velocity = playerRigidBody.velocity + playerRigidBody.transform.up * 4f;
                 heat = heat + 2;
             }
             //Debug.Log("heat =" + heat);
