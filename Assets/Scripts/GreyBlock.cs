@@ -18,19 +18,31 @@ public class GreyBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.redPower == true)
+        if (player.redPower == true && withinBounds())
         {
             GetComponent<Renderer>().material = redMaterial;
         }
-        else if (player.bluePower == true)
+        else if (player.bluePower == true && withinBounds() == true)
         {
             GetComponent<Renderer>().material = blueMaterial;
         }
-        else if (player.greenPower == true)
+        else if (player.greenPower == true && withinBounds())
         {
             GetComponent<Renderer>().material = greenMaterial;
         }
         else
             GetComponent<Renderer>().material = greyMaterial;
+    }
+
+    public bool withinBounds()
+    {
+        if ((transform.position.z > player.myLocationZ - 60) && (transform.position.z < player.myLocationZ + 60))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

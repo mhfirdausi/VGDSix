@@ -14,15 +14,27 @@ public class RedBlock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (player.greenPower == true)
+        if (player.greenPower == true && withinBounds())
         {
             GetComponent<Renderer>().material = greenMaterial;
         }
-        else if (player.bluePower == true)
+        else if (player.bluePower == true && withinBounds())
         {
             GetComponent<Renderer>().material = blueMaterial;
         }
         else
             GetComponent<Renderer>().material = redMaterial;
 	}
+
+    public bool withinBounds()
+    {
+        if ((transform.position.z > player.myLocationZ - 60) && (transform.position.z < player.myLocationZ + 60))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

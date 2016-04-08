@@ -26,6 +26,9 @@ public class RedPower : MonoBehaviour {
             player.redPower = true;
             player.greenPower = false;
             player.bluePower = false;
+
+            //forgive the spaghetti, the below has to do with powerups effecting blocks within a z range.
+            player.myLocationZ = GameObject.Find("playerCylinder").transform.position.z;
         }
     }
 

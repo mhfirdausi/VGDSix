@@ -29,13 +29,13 @@ public class GreyPlate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (speedChange == true && player.redPower == true)
+        if (speedChange == true && player.redPower == true && withinBounds())
         {
             player.playerSpeed = speedNerf;
             StartCoroutine(speedChangeTimerMethod());
             hitChangedToRed.Invoke();
         }
-        else if (speedChange == true && player.greenPower == true)
+        else if (speedChange == true && player.greenPower == true && withinBounds())
         {
             Debug.Log("speedchange");
             player.playerSpeed = speedBoost;
@@ -59,7 +59,7 @@ public class GreyPlate : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player") && player.bluePower == true)
+        if (other.gameObject.CompareTag("Player") && player.bluePower == true && withinBounds() == true)
         {
             playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.y);
         }
@@ -69,11 +69,15 @@ public class GreyPlate : MonoBehaviour
         }
     }
 
-    /*
-    bool inBounds()
+    public bool withinBounds()
     {
-        if (GameObject.Find("playerCylinder").transform.position.y < (10));
-        return true;
+        if ((transform.position.z > player.myLocationZ - 60) && (transform.position.z < player.myLocationZ + 60))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-    */
 }

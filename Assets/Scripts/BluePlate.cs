@@ -19,7 +19,8 @@ public class BluePlate : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.y);
+            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.z, player.blueBoxJump, playerRigidBody.velocity.z);
         }
     }
+
 }

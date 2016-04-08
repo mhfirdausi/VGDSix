@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class player : MonoBehaviour {
     public static int points = 0;
 
+    public static float myLocationZ;
+
     public static bool greenPower;
     public static bool redPower;
     public static bool bluePower;
@@ -62,12 +64,12 @@ public class player : MonoBehaviour {
                 playerRigidBody.velocity += playerRigidBody.transform.up * 4;
                 heat = heat + 2;
             }
-            Debug.Log("heat =" + heat);
+            //Debug.Log("heat =" + heat);
         }
         if (!Input.GetKey("z") && heat >= 0)
         { 
             heat=heat - .6f;
-            Debug.Log("heat =" + heat);
+            //Debug.Log("heat =" + heat);
         }
 
         //jump

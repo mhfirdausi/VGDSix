@@ -29,7 +29,7 @@ public class GreenPlate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (speedChange == true && player.redPower == true)
+        if (speedChange == true && player.redPower == true && withinBounds())
         {
             player.playerSpeed = speedNerf;
             StartCoroutine(speedChangeTimerMethod());
@@ -58,13 +58,25 @@ public class GreenPlate : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player") && player.bluePower == true)
+        if (other.gameObject.CompareTag("Player") && player.bluePower == true && withinBounds())
         {
             playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.y);
         }
         else if (other.gameObject.CompareTag("Player"))
         {
             speedChange = true;
+        }
+    }
+
+    public bool withinBounds()
+    {
+        if ((transform.position.z > player.myLocationZ - 60) && (transform.position.z < player.myLocationZ + 60))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

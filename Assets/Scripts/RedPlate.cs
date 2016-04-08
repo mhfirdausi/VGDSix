@@ -30,7 +30,7 @@ public class RedPlate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (speedChange == true && player.greenPower == true)
+        if (speedChange == true && player.greenPower == true && withinBounds())
         {
             player.playerSpeed = speedBoost;
             StartCoroutine(speedChangeTimerMethod());
@@ -60,7 +60,7 @@ public class RedPlate : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player") && player.bluePower == true)
+        if (other.gameObject.CompareTag("Player") && player.bluePower == true && withinBounds())
         {
             playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.y);
         }
@@ -71,4 +71,15 @@ public class RedPlate : MonoBehaviour
         }
     }
 
+    public bool withinBounds()
+    {
+        if ((transform.position.z > player.myLocationZ - 60) && (transform.position.z < player.myLocationZ + 60))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
