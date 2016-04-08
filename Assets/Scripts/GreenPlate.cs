@@ -13,17 +13,22 @@ public class GreenPlate : MonoBehaviour
 
     public Rigidbody playerRigidBody;
 
-    public UnityEvent hitChangedToRed;
-    public UnityEvent hitGreenBlock;
-    public UnityEvent resumeNormal;
+    private MusicLevelController musicController;
 
-    // Use this for initialization
     void Awake()
     {
         baseSpeed = player.playerSpeed;
         speedBoost = player.playerSpeed * player.speedUpMult;
         speedNerf = player.playerSpeed * player.speedDownMult;
         playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
+        try
+        {
+            musicController = GameObject.FindGameObjectWithTag("MusicController").GetComponent<MusicLevelController>();
+        }
+        catch (System.NullReferenceException e)
+        {
+            Debug.LogError(e.Message);
+        }
     }
 
     // Update is called once per frame
@@ -33,13 +38,13 @@ public class GreenPlate : MonoBehaviour
         {
             player.playerSpeed = speedNerf;
             StartCoroutine(speedChangeTimerMethod());
-            hitChangedToRed.Invoke();
+            musicController.slowDownMusicEvent.Invoke();
         }
         else if (speedChange == true)
         {
             player.playerSpeed = speedBoost;
             StartCoroutine(speedChangeTimerMethod());
-            hitGreenBlock.Invoke();
+            musicController.speedUpMusicEvent.Invoke();
         }
     }
 
@@ -53,7 +58,7 @@ public class GreenPlate : MonoBehaviour
     {
         speedChange = false;
         player.playerSpeed = baseSpeed;
-        resumeNormal.Invoke();
+        musicController.playNormalMusicEvent.Invoke();
     }
 
     void OnCollisionEnter(Collision other)

@@ -30,13 +30,14 @@ public class player : MonoBehaviour {
     public int jumps;
     public static float heat;
 
+    public Canvas deathMenu;
+    public Text countdown;
+
     public float levelBottom = 30f;
     public UnityEvent onPlayerFall;
     public UnityEvent onPlayerQuit;
-
-	public Canvas deathMenu;
-	public Text countdown;
-
+    public UnityEvent hitRedBlock;
+    public UnityEvent hitGreenBlock;
 
     void Start () {
         Time.timeScale = 1f;
@@ -125,6 +126,14 @@ public class player : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        
+        Debug.Log(other.gameObject.ToString());
+        if(other.gameObject.tag == "GreenPlate" )
+        {
+            Debug.Log("Speed up music!");
+        }
+        else if (other.gameObject.tag == "RedPlate")
+        {
+            Debug.Log("Slow down music!");
+        }
     }
 }

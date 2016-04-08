@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11414124}
   m_Layer: 0
   m_Name: BluePlate
-  m_TagString: BounceCube
+  m_TagString: BouncePlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

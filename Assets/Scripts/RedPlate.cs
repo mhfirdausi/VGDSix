@@ -13,34 +13,38 @@ public class RedPlate : MonoBehaviour
 
     public Rigidbody playerRigidBody;
 
-    public UnityEvent hitChangedToGreen;
-    public UnityEvent hitRedBlock;
-    public UnityEvent resumeNormal;
+    private MusicLevelController musicController;
 
-    // Use this for initialization
     void Awake()
     {
         baseSpeed = player.playerSpeed;
         speedBoost = player.playerSpeed * player.speedUpMult;
         speedNerf = player.playerSpeed * player.speedDownMult;
         playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
+        try
+        {
+            musicController = GameObject.FindGameObjectWithTag("MusicController").GetComponent<MusicLevelController>();
+        }
+        catch (System.NullReferenceException e)
+        {
+            Debug.LogError(e.Message);
+        }
 
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (speedChange == true && player.greenPower == true && withinBounds())
         {
             player.playerSpeed = speedBoost;
             StartCoroutine(speedChangeTimerMethod());
-            hitChangedToGreen.Invoke();
+            musicController.speedUpMusicEvent.Invoke();
         }
         else if (speedChange == true)
         {
             player.playerSpeed = speedNerf;
             StartCoroutine(speedChangeTimerMethod());
-            hitRedBlock.Invoke();
+            musicController.slowDownMusicEvent.Invoke();
         }
     }
 
@@ -55,7 +59,7 @@ public class RedPlate : MonoBehaviour
     {
         speedChange = false;
         player.playerSpeed = baseSpeed;
-        resumeNormal.Invoke();
+        musicController.playNormalMusicEvent.Invoke();
     }
 
     void OnCollisionEnter(Collision other)

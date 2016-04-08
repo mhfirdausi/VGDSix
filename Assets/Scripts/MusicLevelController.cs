@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class MusicLevelController : MonoBehaviour {
 
@@ -11,12 +12,21 @@ public class MusicLevelController : MonoBehaviour {
 
     public float levelSize;
 
+    private float slowDownSpeed;
+    private float speedUpSpeed;
+
     public AudioSource currentSource;
-	// Use this for initialization
-	void Start () {
+
+    public UnityEvent slowDownMusicEvent;
+    public UnityEvent speedUpMusicEvent;
+    public UnityEvent playNormalMusicEvent;
+
+    void Start () {
         showWaveform = false;
         isPaused = false;
         ren = this.GetComponent<SpriteRenderer>();
+        slowDownSpeed = player.speedDownMult;
+        speedUpSpeed = player.speedUpMult;
 	}
 	
 	// Update is called once per frame
@@ -70,7 +80,6 @@ public class MusicLevelController : MonoBehaviour {
     
     public void stopPlayingSong()
     {
-        Debug.Log("Need to stop!");
         if (currentSource != null)
         {
             Debug.Log(currentSource.time);
@@ -88,7 +97,7 @@ public class MusicLevelController : MonoBehaviour {
         Debug.Log("Need to slow down!");
         if (currentSource != null)
         {
-            currentSource.pitch = pitchChange;
+            currentSource.pitch = slowDownSpeed;
         }
         else
         {
@@ -101,7 +110,7 @@ public class MusicLevelController : MonoBehaviour {
         Debug.Log("Need to speed up!");
         if (currentSource != null)
         {
-            currentSource.pitch = pitchChange;
+            currentSource.pitch = speedUpSpeed;
         }
         else
         {

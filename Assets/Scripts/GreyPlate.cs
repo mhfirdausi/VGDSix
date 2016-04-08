@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
 
@@ -12,9 +12,7 @@ public class GreyPlate : MonoBehaviour
 
     public Rigidbody playerRigidBody;
 
-    public UnityEvent hitChangedToRed;
-    public UnityEvent hitChangedToGreen;
-    public UnityEvent resumeNormal;
+    private MusicLevelController musicController;
 
     // Use this for initialization
     void Awake()
@@ -22,8 +20,15 @@ public class GreyPlate : MonoBehaviour
         baseSpeed = player.playerSpeed;
         speedBoost = player.playerSpeed * player.speedUpMult;
         speedNerf = player.playerSpeed * player.speedDownMult;
-
         playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
+        try
+        {
+            musicController = GameObject.FindGameObjectWithTag("MusicController").GetComponent<MusicLevelController>();
+        }
+        catch(System.NullReferenceException e)
+        {
+            Debug.LogError(e.Message);
+        }
     }
 
     // Update is called once per frame
@@ -33,14 +38,16 @@ public class GreyPlate : MonoBehaviour
         {
             player.playerSpeed = speedNerf;
             StartCoroutine(speedChangeTimerMethod());
-            hitChangedToRed.Invoke();
+            musicController.slowDownMusicEvent.Invoke();
+            //hitChangedToRed.Invoke();
         }
         else if (speedChange == true && player.greenPower == true && withinBounds())
         {
             Debug.Log("speedchange");
             player.playerSpeed = speedBoost;
             StartCoroutine(speedChangeTimerMethod());
-            hitChangedToGreen.Invoke();
+            musicController.speedUpMusicEvent.Invoke();
+            //hitChangedToGreen.Invoke();
         }
     }
 
@@ -54,7 +61,8 @@ public class GreyPlate : MonoBehaviour
     {
         speedChange = false;
         player.playerSpeed = baseSpeed;
-        resumeNormal.Invoke();
+        musicController.playNormalMusicEvent.Invoke();
+        //resumeNormal.Invoke();
     }
 
     void OnCollisionEnter(Collision other)
