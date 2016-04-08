@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class RedPower : MonoBehaviour {
-    public int redPowerTimer = 5;
+    public int redPowerTimer = 3;
 
     // Use this for initialization
     void Start()
