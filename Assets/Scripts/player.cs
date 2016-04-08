@@ -51,27 +51,8 @@ public class player : MonoBehaviour {
 
     void Update() {
 
-        //jetpack
+       
         
-        if (Input.GetKey("z") && heat < 100)
-        {
-            if (playerRigidBody.velocity.y < 0)
-            {
-                playerRigidBody.velocity = playerRigidBody.velocity + playerRigidBody.transform.up * 9f;
-                heat = heat + 2;
-            }
-            else if (playerRigidBody.velocity.y >= 0)
-            {
-                playerRigidBody.velocity = playerRigidBody.velocity + playerRigidBody.transform.up * 4f;
-                heat = heat + 2;
-            }
-            //Debug.Log("heat =" + heat);
-        }
-        if (!Input.GetKey("z") && heat >= 0)
-        { 
-            heat=heat - .6f;
-            //Debug.Log("heat =" + heat);
-        }
 
         //jump
         if (Input.GetKeyDown(KeyCode.Space) && !(Input.GetKey("z")))
@@ -104,6 +85,26 @@ public class player : MonoBehaviour {
 			deathMenu.enabled = true;
 			countdown.enabled = true;
             reload ();
+        }
+
+        if (Input.GetKey("z") && heat < 100)
+        {
+            if (playerRigidBody.velocity.y < 0)
+            {
+                playerRigidBody.velocity = playerRigidBody.velocity + playerRigidBody.transform.up * 9f;
+                heat = heat + 2;
+            }
+            else if (playerRigidBody.velocity.y >= 0)
+            {
+                playerRigidBody.velocity = playerRigidBody.velocity + playerRigidBody.transform.up * 5f;
+                heat = heat + 2;
+            }
+            //Debug.Log("heat =" + heat);
+        }
+        if (!Input.GetKey("z") && heat >= 0)
+        {
+            heat = heat - .6f;
+            //Debug.Log("heat =" + heat);
         }
     }
 
