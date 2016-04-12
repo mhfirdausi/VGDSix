@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class GreenPower : MonoBehaviour {
-    public int greenPowerTimer=3;
+    public static int greenPowerTimer = 3;
+    public static bool routinerunning = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -21,6 +22,8 @@ public class GreenPower : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            StopCoroutine("greenPowerTimer");
+
             player.greenPower = true;
             player.redPower = false;
             player.bluePower = false;
@@ -32,12 +35,14 @@ public class GreenPower : MonoBehaviour {
 
     IEnumerator greenPowerTimerMethod()
     {
+        routinerunning = true;
         yield return new WaitForSeconds(greenPowerTimer);
         greenPowerUndo();
     }
 
     void greenPowerUndo()
     {
+        routinerunning = false;
         player.greenPower = false;
     }
 

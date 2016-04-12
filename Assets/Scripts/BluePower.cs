@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class BluePower : MonoBehaviour {
-    public int bluePowerTimer = 3;
+   public static int bluePowerTimer = 3;
+   public static bool routinerunning = false;
 
     // Use this for initialization
     void Start()
@@ -13,7 +14,7 @@ public class BluePower : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (player.bluePower == true)
+        if (player.bluePower == true && routinerunning == false)
         {
             StartCoroutine(bluePowerTimerMethod());
         }
@@ -23,6 +24,8 @@ public class BluePower : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            StopCoroutine(bluePowerTimerMethod());
+       
             player.bluePower = true;
             player.greenPower = false;
             player.redPower = false;
@@ -32,15 +35,18 @@ public class BluePower : MonoBehaviour {
         }
     }
 
-    IEnumerator bluePowerTimerMethod()
+    public static IEnumerator bluePowerTimerMethod()
     {
+        routinerunning = true;
         yield return new WaitForSeconds(bluePowerTimer);
         bluePowerUndo();
     }
 
-    void bluePowerUndo()
+    public static void bluePowerUndo()
     {
+        routinerunning = false;
         player.bluePower = false;
+        
     }
 
 }

@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class RedPower : MonoBehaviour {
-    public int redPowerTimer = 3;
+    public static int redPowerTimer = 3;
+    public static bool routinerunning = false;
 
     // Use this for initialization
     void Start()
@@ -13,7 +14,7 @@ public class RedPower : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (player.redPower == true)
+        if (player.redPower == true && routinerunning == false)
         {
             StartCoroutine(redPowerTimerMethod());
         }
@@ -23,6 +24,8 @@ public class RedPower : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            StopCoroutine("redPowerTimer");
+
             player.redPower = true;
             player.greenPower = false;
             player.bluePower = false;
@@ -34,12 +37,14 @@ public class RedPower : MonoBehaviour {
 
     IEnumerator redPowerTimerMethod()
     {
+        routinerunning = true;
         yield return new WaitForSeconds(redPowerTimer);
         redPowerUndo();
     }
 
     void redPowerUndo()
     {
+        routinerunning = false;
         player.redPower = false;
     }
 
