@@ -22,6 +22,10 @@ public class Collectible : MonoBehaviour {
 
         if (other.gameObject.CompareTag("Player"))
         {
+            if (player.heat >= 2)
+            {
+                player.heat = player.heat - 3;
+            }
             player.points = player.points + 5;
             Destroy(gameObject);
         }

@@ -19,6 +19,7 @@ public class player : MonoBehaviour {
     public static float speedUpMult = 1.3f;
 
     public static float blueBoxJump = 100f;
+    public float maxSpeed = 110f;
 
 
     public static float playerSpeed= 23.8095238095f;
@@ -47,7 +48,8 @@ public class player : MonoBehaviour {
 		countdown.enabled = false;
 
         heat = 0;
-	}
+        playerSpeed = 23.8095238095f;
+    }
 
     void Update() {
 
@@ -79,14 +81,15 @@ public class player : MonoBehaviour {
     {
         float distanceToMove = playerSpeed * Time.deltaTime;
         transform.Translate(dir * distanceToMove);
-        if(transform.position.y <= levelBottom)
+        if (transform.position.y <= levelBottom)
         {
             onPlayerFall.Invoke();
-			deathMenu.enabled = true;
-			countdown.enabled = true;
-            reload ();
+            deathMenu.enabled = true;
+            countdown.enabled = true;
+            reload();
         }
 
+        //jetpack
         if (Input.GetKey("z") && heat < 100)
         {
             if (playerRigidBody.velocity.y < 0)
@@ -106,6 +109,13 @@ public class player : MonoBehaviour {
             heat = heat - .6f;
             //Debug.Log("heat =" + heat);
         }
+
+        //cap speed
+        if (playerRigidBody.velocity.magnitude > maxSpeed)
+        {
+            playerRigidBody.velocity = playerRigidBody.velocity.normalized * maxSpeed;
+        }
+        Debug.Log(playerRigidBody.velocity.magnitude);
     }
 
 	void reload() {
