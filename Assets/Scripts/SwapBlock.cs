@@ -8,34 +8,51 @@ public class SwapBlock : MonoBehaviour {
    public GameObject slow;
    public GameObject speed;
    public GameObject bounce;
+   public Queue blocks;
    private int cube;
-    
+   private int number;
+
+    void start()
+    {
+        blocks = new Queue(1);
+        
+    }
+
+    void update()
+    {
+        if (blocks.Count < 1)
+        {
+            number = UnityEngine.Random.Range(0, 3);
+            blocks.Enqueue(number);
+        }
+    }
+
     void OnMouseDown()
     {
-        cube=UnityEngine.Random.Range(0, 3);
-        if (cube == 0)
+        
+        if (blocks.Peek().Equals(0))
         {
-            
 
-                GameObject obj = (GameObject)Instantiate(slow, neutral.transform.position, neutral.transform.rotation);
+            blocks.Dequeue();
+            GameObject obj = (GameObject)Instantiate(slow, neutral.transform.position, neutral.transform.rotation);
                 Destroy(neutral);
 
             
         }
-        else if (cube == 1)
+        else if (blocks.Peek().Equals(1))
         {
-            
 
-                GameObject obj = (GameObject)Instantiate(speed, neutral.transform.position, neutral.transform.rotation);
+            blocks.Dequeue();
+            GameObject obj = (GameObject)Instantiate(speed, neutral.transform.position, neutral.transform.rotation);
                 Destroy(neutral);
 
             
         }
         else
         {
-           
 
-                GameObject obj = (GameObject)Instantiate(bounce, neutral.transform.position, neutral.transform.rotation);
+            blocks.Dequeue();
+            GameObject obj = (GameObject)Instantiate(bounce, neutral.transform.position, neutral.transform.rotation);
                 Destroy(neutral);
 
             
