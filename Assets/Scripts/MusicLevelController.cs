@@ -82,7 +82,6 @@ public class MusicLevelController : MonoBehaviour {
     {
         if (currentSource != null)
         {
-            Debug.Log(currentSource.time);
             currentSource.Stop();
         }
         else
