@@ -12,13 +12,13 @@ public class SwapBlock : MonoBehaviour {
    private int cube;
    private int number;
 
-    void start()
+    void Start()
     {
         blocks = new Queue(1);
         
     }
 
-    void update()
+    void Update()
     {
         if (blocks.Count < 1)
         {
