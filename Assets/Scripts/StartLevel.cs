@@ -47,7 +47,7 @@ public class StartLevel : MonoBehaviour {
 
 	public void loadFuture()
 	{
-		SceneManager.LoadScene ("EVOL");
+		SceneManager.LoadScene ("tutorial");
 
 	}
 
