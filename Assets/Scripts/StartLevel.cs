@@ -39,13 +39,13 @@ public class StartLevel : MonoBehaviour {
 		//ScrollView.transform.position = endPointEVOL;
 	}
 
-	public void loadYeezy()
+	public void loadMain()
 	{
 		SceneManager.LoadScene ("Sport N Bass");
 
 	}
 
-	public void loadFuture()
+	public void loadTutorial()
 	{
 		SceneManager.LoadScene ("tutorial");
 
