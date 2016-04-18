@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class player : MonoBehaviour {
     public static int points = 0;
+	public static int maxpoints;
+	public Text pointsText;
+	public Text pointsText2;
+	public Text countdownText;
 
     public static float myLocationZ;
 
@@ -74,6 +78,10 @@ public class player : MonoBehaviour {
             SceneManager.LoadScene("Start");
         }
         isFalling = true;
+
+		//Points collection - Turner
+		pointsText.text = "POINTS: " + points.ToString();
+		pointsText2.text = "POINTS: " + points.ToString();
         
     }
 
@@ -86,6 +94,7 @@ public class player : MonoBehaviour {
             onPlayerFall.Invoke();
             deathMenu.enabled = true;
             countdown.enabled = true;
+			StartCoroutine ("HailMary");
             reload();
         }
 
@@ -120,13 +129,29 @@ public class player : MonoBehaviour {
 
 	void reload() {
 		StartCoroutine ("Wait");
-        heat = 0;
+		heat = 0;
+		if (points > maxpoints) {
+			points = maxpoints;
+		}
+		points = 0;
 	}
 
 	IEnumerator Wait()
 	{
 		yield return new WaitForSeconds(3.0f);
 		SceneManager.LoadScene ("Sport N Bass");
+	}
+
+
+	//YES IT LOOKS STUPID, BUT IT WORKS.
+	IEnumerator HailMary()
+	{
+		countdownText.text = "3";
+		yield return new WaitForSeconds(1.2f);
+		countdownText.text = "2";
+		yield return new WaitForSeconds(1.2f);
+		countdownText.text = "1";
+
 	}
 
     void OnCollisionStay()

@@ -8,6 +8,12 @@ public class Timer : MonoBehaviour {
 	private float time;
 
 	void Update() {
+		StartCoroutine ("Wait");
+	}
+
+	IEnumerator Wait()
+	{
+		yield return new WaitForSeconds(2.0f);
 		time += Time.deltaTime;
 
 		var minutes = time / 60;
