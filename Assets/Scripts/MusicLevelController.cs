@@ -14,6 +14,7 @@ public class MusicLevelController : MonoBehaviour {
 
     private float slowDownSpeed;
     private float speedUpSpeed;
+    private player currentPlayer;
 
     public AudioSource currentSource;
 
@@ -21,12 +22,23 @@ public class MusicLevelController : MonoBehaviour {
     public UnityEvent speedUpMusicEvent;
     public UnityEvent playNormalMusicEvent;
 
+    private bool canSpeedUp, canSlowDown, canResumeNormal;
+
     void Start () {
         showWaveform = false;
         isPaused = false;
+        canSlowDown = canSpeedUp = canResumeNormal = true;
         ren = this.GetComponent<SpriteRenderer>();
         slowDownSpeed = player.speedDownMult;
         speedUpSpeed = player.speedUpMult;
+        try
+        {
+            currentPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
+        }
+        catch (System.NullReferenceException e)
+        {
+            Debug.LogError("MusicLevel can't find player! " + e.Message);
+        }
 	}
 	
 	// Update is called once per frame
@@ -93,10 +105,17 @@ public class MusicLevelController : MonoBehaviour {
     //Functions are the same, may potentially be different in the future?
     public void slowDownSong(float pitchChange)
     {
-        Debug.Log("Need to slow down!");
         if (currentSource != null)
         {
-            currentSource.pitch = slowDownSpeed;
+            if(canSlowDown)
+            {
+                Debug.Log("Need to slow down!");
+                currentSource.pitch = slowDownSpeed;
+                Debug.Log(currentPlayer.transform.position.z);
+                canSlowDown = false;
+                canSpeedUp = true;
+                canResumeNormal = true;
+            }
         }
         else
         {
@@ -106,10 +125,18 @@ public class MusicLevelController : MonoBehaviour {
     
     public void speedUpSong(float pitchChange)
     {
-        Debug.Log("Need to speed up!");
+        
         if (currentSource != null)
         {
-            currentSource.pitch = speedUpSpeed;
+            if(canSpeedUp)
+            {
+                Debug.Log("Need to speed up!");
+                currentSource.pitch = speedUpSpeed;
+                Debug.Log(currentPlayer.transform.position.z);
+                canSpeedUp = false;
+                canSlowDown = true;
+                canResumeNormal = true;
+            }
         }
         else
         {
@@ -118,11 +145,18 @@ public class MusicLevelController : MonoBehaviour {
     }
     public void playSongNormal()
     {
-        Debug.Log("Resuming normal playback");
         if (currentSource != null)
         {
-            Debug.Log(currentSource.time);
-            currentSource.pitch = 1f;
+            if(canResumeNormal)
+            {
+                Debug.Log("Normal! Song time: " + currentSource.time);
+                Debug.Log("Expected time: " + DeterminePosition());
+                currentSource.pitch = 1f;
+                currentSource.time = DeterminePosition();
+                canSpeedUp = true;
+                canSlowDown = true;
+                canResumeNormal = false;
+            }
         }
         else
         {
@@ -133,5 +167,10 @@ public class MusicLevelController : MonoBehaviour {
     public void playSongAtPosition(float position)
     {
 
+    }
+
+    private float DeterminePosition()
+    {
+        return currentPlayer.transform.position.z / player.playerSpeed;
     }
 } 

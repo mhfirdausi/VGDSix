@@ -41,8 +41,6 @@ public class player : MonoBehaviour {
     public float levelBottom = 30f;
     public UnityEvent onPlayerFall;
     public UnityEvent onPlayerQuit;
-    public UnityEvent hitRedBlock;
-    public UnityEvent hitGreenBlock;
 
     void Start () {
         Time.timeScale = 1f;
@@ -91,11 +89,7 @@ public class player : MonoBehaviour {
         transform.Translate(dir * distanceToMove);
         if (transform.position.y <= levelBottom)
         {
-            onPlayerFall.Invoke();
-            deathMenu.enabled = true;
-            countdown.enabled = true;
-			StartCoroutine ("HailMary");
-            reload();
+            Debug.Log("Dead");
         }
 
         //jetpack
@@ -124,7 +118,7 @@ public class player : MonoBehaviour {
         {
             playerRigidBody.velocity = playerRigidBody.velocity.normalized * maxSpeed;
         }
-        Debug.Log(playerRigidBody.velocity.magnitude);
+        //Debug.Log(playerRigidBody.velocity.magnitude);
     }
 
 	void reload() {
@@ -154,6 +148,15 @@ public class player : MonoBehaviour {
 
 	}
 
+    void TriggerDeath()
+    {
+        onPlayerFall.Invoke();
+        deathMenu.enabled = true;
+        countdown.enabled = true;
+        StartCoroutine("HailMary");
+        reload();
+    }
+
     void OnCollisionStay()
     {
         isFalling = false;
@@ -162,14 +165,14 @@ public class player : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.ToString());
-        if(other.gameObject.tag == "GreenPlate" )
+        //Debug.Log(other.gameObject.ToString());
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "DeathPlane")
         {
-            Debug.Log("Speed up music!");
-        }
-        else if (other.gameObject.tag == "RedPlate")
-        {
-            Debug.Log("Slow down music!");
+            TriggerDeath();
         }
     }
 }

@@ -12,6 +12,10 @@ TagManager:
   - GreenPlate
   - RedPlate
   - MusicController
+  - BouncePlate
+  - SpeedPlate
+  - SlowPlate
+  - DeathPlane
   layers:
   - Default
   - TransparentFX
