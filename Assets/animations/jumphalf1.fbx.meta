@@ -1,0 +1,372 @@
+fileFormatVersion: 2
+guid: a6b2d618ab9db154bafd337e2325d5cf
+timeCreated: 1461285034
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: be_clavicle
+    100002: be_clavicle1
+    100004: be_head01
+    100006: be_l_ankle01
+    100008: be_l_toe01
+    100010: be_pelvis01
+    100012: be_r_ankle01
+    100014: be_r_toe01
+    100016: bn_chest01
+    100018: bn_chin01
+    100020: bn_l_ankle01
+    100022: bn_l_chin01
+    100024: bn_l_clavic01
+    100026: bn_l_foot
+    100028: bn_l_tight01
+    100030: bn_neck01
+    100032: bn_pelvis01
+    100034: bn_r_ankle01
+    100036: bn_r_chin01
+    100038: bn_r_clavic01
+    100040: bn_r_foot
+    100042: bn_r_tight01
+    100044: bn_torso01
+    100046: body
+    100048: character
+    100050: elbowlcurve
+    100052: elbowrcurve
+    100054: eye1
+    100056: eye2
+    100058: foot_l_curve
+    100060: foot_r_curve
+    100062: hair
+    100064: hair3
+    100066: hair4
+    100068: hair5
+    100070: hair6
+    100072: hair7
+    100074: hand_lcurve
+    100076: hand_rcurve
+    100078: hat
+    100080: head1
+    100082: headCurve
+    100084: headp1
+    100086: headp2
+    100088: headp3
+    100090: hipscurve
+    100092: IK01
+    100094: ik_l_arm
+    100096: ik_r_arm
+    100098: joint4
+    100100: joint4 1
+    100102: joint5
+    100104: joint5 1
+    100106: joint6
+    100108: joint6 1
+    100110: //RootNode
+    100112: rpIK_l_ankle01
+    100114: rpIK_r_ankle01
+    100116: skeletohroot
+    100118: tightcurve
+    400000: be_clavicle
+    400002: be_clavicle1
+    400004: be_head01
+    400006: be_l_ankle01
+    400008: be_l_toe01
+    400010: be_pelvis01
+    400012: be_r_ankle01
+    400014: be_r_toe01
+    400016: bn_chest01
+    400018: bn_chin01
+    400020: bn_l_ankle01
+    400022: bn_l_chin01
+    400024: bn_l_clavic01
+    400026: bn_l_foot
+    400028: bn_l_tight01
+    400030: bn_neck01
+    400032: bn_pelvis01
+    400034: bn_r_ankle01
+    400036: bn_r_chin01
+    400038: bn_r_clavic01
+    400040: bn_r_foot
+    400042: bn_r_tight01
+    400044: bn_torso01
+    400046: body
+    400048: character
+    400050: elbowlcurve
+    400052: elbowrcurve
+    400054: eye1
+    400056: eye2
+    400058: foot_l_curve
+    400060: foot_r_curve
+    400062: hair
+    400064: hair3
+    400066: hair4
+    400068: hair5
+    400070: hair6
+    400072: hair7
+    400074: hand_lcurve
+    400076: hand_rcurve
+    400078: hat
+    400080: head1
+    400082: headCurve
+    400084: headp1
+    400086: headp2
+    400088: headp3
+    400090: hipscurve
+    400092: IK01
+    400094: ik_l_arm
+    400096: ik_r_arm
+    400098: joint4
+    400100: joint4 1
+    400102: joint5
+    400104: joint5 1
+    400106: joint6
+    400108: joint6 1
+    400110: //RootNode
+    400112: rpIK_l_ankle01
+    400114: rpIK_r_ankle01
+    400116: skeletohroot
+    400118: tightcurve
+    4300000: body
+    4300002: hat
+    4300004: hair
+    4300006: headp1
+    4300008: head1
+    4300010: eye1
+    4300012: headp2
+    4300014: hair3
+    4300016: hair4
+    4300018: hair5
+    4300020: eye2
+    4300022: headp3
+    4300024: hair6
+    4300026: hair7
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+    13700002: eye1
+    13700004: eye2
+    13700006: hair
+    13700008: hair3
+    13700010: hair4
+    13700012: hair5
+    13700014: hair6
+    13700016: hair7
+    13700018: hat
+    13700020: head1
+    13700022: headp1
+    13700024: headp2
+    13700026: headp3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 2.4
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character
+        weight: 1
+      - path: character/body
+        weight: 1
+      - path: character/eye1
+        weight: 1
+      - path: character/eye2
+        weight: 1
+      - path: character/hair
+        weight: 1
+      - path: character/hair3
+        weight: 1
+      - path: character/hair4
+        weight: 1
+      - path: character/hair5
+        weight: 1
+      - path: character/hair6
+        weight: 1
+      - path: character/hair7
+        weight: 1
+      - path: character/hat
+        weight: 1
+      - path: character/head1
+        weight: 1
+      - path: character/headp1
+        weight: 1
+      - path: character/headp2
+        weight: 1
+      - path: character/headp3
+        weight: 1
+      - path: elbowlcurve
+        weight: 1
+      - path: elbowrcurve
+        weight: 1
+      - path: foot_l_curve
+        weight: 1
+      - path: foot_r_curve
+        weight: 1
+      - path: hand_lcurve
+        weight: 1
+      - path: hand_rcurve
+        weight: 1
+      - path: headCurve
+        weight: 1
+      - path: hipscurve
+        weight: 1
+      - path: IK01
+        weight: 1
+      - path: IK01/rpIK_l_ankle01
+        weight: 1
+      - path: IK01/rpIK_r_ankle01
+        weight: 1
+      - path: ik_l_arm
+        weight: 1
+      - path: ik_r_arm
+        weight: 1
+      - path: skeletohroot
+        weight: 1
+      - path: skeletohroot/bn_pelvis01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/be_pelvis01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01/bn_l_chin01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01/bn_l_chin01/be_l_ankle01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01/bn_l_chin01/be_l_ankle01/bn_l_ankle01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01/bn_l_chin01/be_l_ankle01/bn_l_ankle01/bn_l_foot
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_l_tight01/bn_l_chin01/be_l_ankle01/bn_l_ankle01/bn_l_foot/be_l_toe01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01/bn_r_chin01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01/bn_r_chin01/be_r_ankle01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01/bn_r_chin01/be_r_ankle01/bn_r_ankle01
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01/bn_r_chin01/be_r_ankle01/bn_r_ankle01/bn_r_foot
+        weight: 1
+      - path: skeletohroot/bn_pelvis01/bn_r_tight01/bn_r_chin01/be_r_ankle01/bn_r_ankle01/bn_r_foot/be_r_toe01
+        weight: 1
+      - path: skeletohroot/bn_torso01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle/bn_l_clavic01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle/bn_l_clavic01/joint4
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle/bn_l_clavic01/joint4/joint5
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle/bn_l_clavic01/joint4/joint5/joint6
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle1
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle1/bn_r_clavic01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle1/bn_r_clavic01/joint4
+          1
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle1/bn_r_clavic01/joint4
+          1/joint5 1
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/be_clavicle1/bn_r_clavic01/joint4
+          1/joint5 1/joint6 1
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/bn_neck01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/bn_neck01/bn_chin01
+        weight: 1
+      - path: skeletohroot/bn_torso01/bn_chest01/bn_neck01/bn_chin01/be_head01
+        weight: 1
+      - path: tightcurve
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
