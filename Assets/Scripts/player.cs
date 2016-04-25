@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class player : MonoBehaviour {
+    Animator animator;
+
     public static int points = 0;
 	public static int maxpoints;
 	public Text pointsText;
@@ -31,7 +33,7 @@ public class player : MonoBehaviour {
     private Vector3 dir;
 
     public Rigidbody playerRigidBody;
-    public static bool isFalling = false;
+    public bool isFalling = false;
     public int jumps;
     public static float heat;
 
@@ -51,6 +53,8 @@ public class player : MonoBehaviour {
 
         heat = 0;
         playerSpeed = 23.8095238095f;
+
+        animator = GameObject.Find("run").GetComponent<Animator>();
     }
 
     void Update() {
@@ -75,7 +79,7 @@ public class player : MonoBehaviour {
             onPlayerQuit.Invoke();
             SceneManager.LoadScene("Start");
         }
-        isFalling = true;
+        
 
 		//Points collection - Turner
 		pointsText.text = "POINTS: " + points.ToString();
@@ -91,6 +95,22 @@ public class player : MonoBehaviour {
         {
             Debug.Log("Dead");
         }
+
+
+        //anim stuff
+        float yVel = playerRigidBody.velocity.y;
+        animator.SetFloat("yVelocity", yVel);
+        animator.SetBool("isFalling", isFalling);
+        if (playerRigidBody.velocity.y < 0 || playerRigidBody.velocity.y > 0)
+        {
+            isFalling = true;
+        }
+        else
+        {
+            isFalling = false;
+        }
+        Debug.Log(playerRigidBody.velocity.y);
+        
 
         //jetpack
         if (Input.GetKey("z") && heat < 100)
@@ -159,7 +179,7 @@ public class player : MonoBehaviour {
 
     void OnCollisionStay()
     {
-        isFalling = false;
+        //isFalling = false;
         jumps = 0;
     } 
 
