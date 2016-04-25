@@ -15,6 +15,8 @@ public class GreenPlate : MonoBehaviour
 
     private MusicLevelController musicController;
 
+    private Coroutine greenPlateCoroutine;
+
     void Awake()
     {
         baseSpeed = player.playerSpeed;
@@ -37,13 +39,15 @@ public class GreenPlate : MonoBehaviour
         if (speedChange == true && player.redPower == true && withinBounds())
         {
             player.playerSpeed = speedNerf;
-            StartCoroutine(speedChangeTimerMethod());
+            if (greenPlateCoroutine != null)
+                StopCoroutine(greenPlateCoroutine);
+            greenPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
             musicController.slowDownMusicEvent.Invoke();
         }
         else if (speedChange == true)
         {
             player.playerSpeed = speedBoost;
-            StartCoroutine(speedChangeTimerMethod());
+            greenPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
             musicController.speedUpMusicEvent.Invoke();
         }
     }

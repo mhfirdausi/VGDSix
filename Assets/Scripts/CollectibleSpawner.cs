@@ -31,17 +31,14 @@ public class CollectibleSpawner : MonoBehaviour {
         {
             if (randomValue <= .88f)
             {
-                //Debug.Log("Spawn blue powerup!" + randomValue);
                 Instantiate(Resources.Load("BluePower"), transform.position + new Vector3(0, 5f), Quaternion.Euler(90f, 0, 0));
             }
             else if (randomValue <= .94f)
             {
-                //Debug.Log("Spawn red powerup!" + randomValue);
                 Instantiate(Resources.Load("RedPower"), transform.position + new Vector3(0, 5f), Quaternion.Euler(90f, 0, 0));
             }
             else if (randomValue <= 1f)
             {
-                //Debug.Log("Spawn green powerup!" + randomValue);
                 Instantiate(Resources.Load("GreenPower"), transform.position + new Vector3(0, 5f), Quaternion.Euler(90f, 0, 0));
             }
 

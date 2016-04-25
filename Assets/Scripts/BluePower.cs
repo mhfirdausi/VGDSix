@@ -5,6 +5,7 @@ public class BluePower : MonoBehaviour {
    public static int bluePowerTimer = 3;
    public static bool routinerunning = false;
 
+    public float speed = 10f;
     private Coroutine blueCoroutine;
     // Use this for initialization
     void Start()
@@ -19,6 +20,12 @@ public class BluePower : MonoBehaviour {
         {
             blueCoroutine = StartCoroutine(bluePowerTimerMethod());
         }
+        transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+    }
+
+    void FixedUpdate()
+    {
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -34,6 +41,7 @@ public class BluePower : MonoBehaviour {
 
             //forgive the spaghetti, the below has to do with powerups effecting blocks within a z range.
             player.myLocationZ = GameObject.Find("playerCylinder").transform.position.z;
+            this.GetComponent<Renderer>().enabled = false;
         }
     }
 
@@ -48,7 +56,6 @@ public class BluePower : MonoBehaviour {
     {
         routinerunning = false;
         player.bluePower = false;
-        
     }
 
 }

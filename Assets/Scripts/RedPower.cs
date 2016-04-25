@@ -5,6 +5,8 @@ public class RedPower : MonoBehaviour {
     public static int redPowerTimer = 3;
     public static bool routinerunning = false;
 
+    public float speed = 10f;
+
     private Coroutine redCoroutine;
     // Use this for initialization
     void Start()
@@ -19,8 +21,12 @@ public class RedPower : MonoBehaviour {
         {
             redCoroutine = StartCoroutine(redPowerTimerMethod());
         }
+        transform.Rotate(Vector3.forward * speed * Time.deltaTime);
     }
 
+    void FixedUpdate()
+    {
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -34,6 +40,7 @@ public class RedPower : MonoBehaviour {
 
             //forgive the spaghetti, the below has to do with powerups effecting blocks within a z range.
             player.myLocationZ = GameObject.Find("playerCylinder").transform.position.z;
+            this.GetComponent<Renderer>().enabled = false;
         }
     }
 

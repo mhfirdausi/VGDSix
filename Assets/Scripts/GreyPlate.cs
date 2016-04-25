@@ -14,6 +14,8 @@ public class GreyPlate : MonoBehaviour
 
     private MusicLevelController musicController;
 
+    private Coroutine greyPlateCoroutine;
+
     // Use this for initialization
     void Awake()
     {
@@ -37,7 +39,9 @@ public class GreyPlate : MonoBehaviour
         if (speedChange == true && player.redPower == true && withinBounds())
         {
             player.playerSpeed = speedNerf;
-            StartCoroutine(speedChangeTimerMethod());
+            if (greyPlateCoroutine != null)
+                StopCoroutine(greyPlateCoroutine);
+            greyPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
             musicController.slowDownMusicEvent.Invoke();
             //hitChangedToRed.Invoke();
         }
@@ -45,7 +49,9 @@ public class GreyPlate : MonoBehaviour
         {
             Debug.Log("speedchange");
             player.playerSpeed = speedBoost;
-            StartCoroutine(speedChangeTimerMethod());
+            if (greyPlateCoroutine != null)
+                StopCoroutine(greyPlateCoroutine);
+            greyPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
             musicController.speedUpMusicEvent.Invoke();
             //hitChangedToGreen.Invoke();
         }
