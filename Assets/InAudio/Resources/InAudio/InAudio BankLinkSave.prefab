@@ -46,7 +46,9 @@ MonoBehaviour:
   _parent: {fileID: 11476860}
   _children: []
   _autoLoad: 1
-  _bankData: []
+  _bankData:
+  - AudioNode: {fileID: 11439636, guid: 277accaf755389c46959011af86ec38b, type: 2}
+    MusicNode: {fileID: 0}
   FoldedOut: 1
   Filtered: 0
 --- !u!114 &11476860

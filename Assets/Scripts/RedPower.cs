@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class RedPower : MonoBehaviour {
     public static int redPowerTimer = 3;
     public static bool routinerunning = false;
 
+    private Coroutine redCoroutine;
     // Use this for initialization
     void Start()
     {
@@ -16,7 +17,7 @@ public class RedPower : MonoBehaviour {
     {
         if (player.redPower == true && routinerunning == false)
         {
-            StartCoroutine(redPowerTimerMethod());
+            redCoroutine = StartCoroutine(redPowerTimerMethod());
         }
     }
 
@@ -24,7 +25,8 @@ public class RedPower : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            StopCoroutine("redPowerTimer");
+            if (redCoroutine != null)
+                StopCoroutine(redCoroutine);
 
             player.redPower = true;
             player.greenPower = false;

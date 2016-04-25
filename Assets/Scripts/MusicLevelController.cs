@@ -102,7 +102,6 @@ public class MusicLevelController : MonoBehaviour {
         }
     }
 
-    //Functions are the same, may potentially be different in the future?
     public void slowDownSong(float pitchChange)
     {
         if (currentSource != null)

@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 470182}
   - 114: {fileID: 11461978}
   - 114: {fileID: 11428958}
+  - 114: {fileID: 11479846}
   m_Layer: 0
   m_Name: InAudio EventSave
   m_TagString: Untagged
@@ -42,10 +43,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _guid: 900520959
   _type: 1
-  Name: Event Folder 0
+  Name: SoundFX
   _parent: {fileID: 11461978}
   Delay: 0
-  _children: []
+  _children:
+  - {fileID: 11479846}
   _actionList: []
   FoldedOut: 1
   Filtered: 0
@@ -68,6 +70,27 @@ MonoBehaviour:
   Delay: 0
   _children:
   - {fileID: 11428958}
+  _actionList: []
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &11479846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 833473775
+  _type: 3
+  Name: BounceEffect
+  _parent: {fileID: 11428958}
+  Delay: 0
+  _children: []
   _actionList: []
   FoldedOut: 1
   Filtered: 0

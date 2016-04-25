@@ -1,14 +1,15 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BluePower : MonoBehaviour {
    public static int bluePowerTimer = 3;
    public static bool routinerunning = false;
 
+    private Coroutine blueCoroutine;
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -16,7 +17,7 @@ public class BluePower : MonoBehaviour {
     {
         if (player.bluePower == true && routinerunning == false)
         {
-            StartCoroutine(bluePowerTimerMethod());
+            blueCoroutine = StartCoroutine(bluePowerTimerMethod());
         }
     }
 
@@ -24,7 +25,8 @@ public class BluePower : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            StopCoroutine(bluePowerTimerMethod());
+            if (blueCoroutine != null) 
+                StopCoroutine(blueCoroutine);
        
             player.bluePower = true;
             player.greenPower = false;

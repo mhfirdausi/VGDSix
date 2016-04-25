@@ -65,7 +65,7 @@ public class GreenPlate : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && player.bluePower == true && withinBounds())
         {
-            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.y);
+            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.z);
         }
         else if (other.gameObject.CompareTag("Player"))
         {

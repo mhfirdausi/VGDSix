@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GreenPower : MonoBehaviour {
     public static int greenPowerTimer = 3;
     public static bool routinerunning = false;
 
+    private Coroutine greenCoroutine;
     // Use this for initialization
     void Start () {
 	
@@ -14,7 +15,7 @@ public class GreenPower : MonoBehaviour {
 	void Update () {
         if (player.greenPower == true)
         {
-            StartCoroutine(greenPowerTimerMethod());
+            greenCoroutine = StartCoroutine(greenPowerTimerMethod());
         }
     }
 
@@ -22,7 +23,8 @@ public class GreenPower : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            StopCoroutine("greenPowerTimer");
+            if (greenCoroutine != null)
+                StopCoroutine(greenCoroutine);
 
             player.greenPower = true;
             player.redPower = false;

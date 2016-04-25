@@ -69,7 +69,7 @@ public class GreyPlate : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && player.bluePower == true && withinBounds() == true)
         {
-            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.y);
+            playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.z);
         }
         else if (other.gameObject.CompareTag("Player") && (player.greenPower == true || player.redPower == true))
         {
