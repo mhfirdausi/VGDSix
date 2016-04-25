@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: f2ca1cc6a4ce3b5479df19a12b2f3602
+timeCreated: 1461624258
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: be_clavicle
+    100002: be_clavicle1
+    100004: be_head01
+    100006: be_l_ankle01
+    100008: be_l_toe01
+    100010: be_pelvis01
+    100012: be_r_ankle01
+    100014: be_r_toe01
+    100016: bn_chest01
+    100018: bn_chin01
+    100020: bn_l_ankle01
+    100022: bn_l_chin01
+    100024: bn_l_clavic01
+    100026: bn_l_foot
+    100028: bn_l_tight01
+    100030: bn_neck01
+    100032: bn_pelvis01
+    100034: bn_r_ankle01
+    100036: bn_r_chin01
+    100038: bn_r_clavic01
+    100040: bn_r_foot
+    100042: bn_r_tight01
+    100044: bn_torso01
+    100046: body
+    100048: character
+    100050: eye1
+    100052: eye2
+    100054: foot_l_curve
+    100056: foot_r_curve
+    100058: hair
+    100060: hair3
+    100062: hair4
+    100064: hair5
+    100066: hair6
+    100068: hair7
+    100070: hand_lcurve
+    100072: hand_rcurve
+    100074: hat
+    100076: head1
+    100078: headCurve
+    100080: headp1
+    100082: headp2
+    100084: headp3
+    100086: hipscurve
+    100088: joint4
+    100090: joint4 1
+    100092: joint5
+    100094: joint5 1
+    100096: joint6
+    100098: joint6 1
+    100100: //RootNode
+    100102: skeletohroot
+    100104: tightcurve
+    400000: be_clavicle
+    400002: be_clavicle1
+    400004: be_head01
+    400006: be_l_ankle01
+    400008: be_l_toe01
+    400010: be_pelvis01
+    400012: be_r_ankle01
+    400014: be_r_toe01
+    400016: bn_chest01
+    400018: bn_chin01
+    400020: bn_l_ankle01
+    400022: bn_l_chin01
+    400024: bn_l_clavic01
+    400026: bn_l_foot
+    400028: bn_l_tight01
+    400030: bn_neck01
+    400032: bn_pelvis01
+    400034: bn_r_ankle01
+    400036: bn_r_chin01
+    400038: bn_r_clavic01
+    400040: bn_r_foot
+    400042: bn_r_tight01
+    400044: bn_torso01
+    400046: body
+    400048: character
+    400050: eye1
+    400052: eye2
+    400054: foot_l_curve
+    400056: foot_r_curve
+    400058: hair
+    400060: hair3
+    400062: hair4
+    400064: hair5
+    400066: hair6
+    400068: hair7
+    400070: hand_lcurve
+    400072: hand_rcurve
+    400074: hat
+    400076: head1
+    400078: headCurve
+    400080: headp1
+    400082: headp2
+    400084: headp3
+    400086: hipscurve
+    400088: joint4
+    400090: joint4 1
+    400092: joint5
+    400094: joint5 1
+    400096: joint6
+    400098: joint6 1
+    400100: //RootNode
+    400102: skeletohroot
+    400104: tightcurve
+    4300000: body
+    4300002: hat
+    4300004: hair
+    4300006: headp1
+    4300008: head1
+    4300010: eye1
+    4300012: headp2
+    4300014: hair3
+    4300016: hair4
+    4300018: hair5
+    4300020: eye2
+    4300022: headp3
+    4300024: hair6
+    4300026: hair7
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+    13700002: eye1
+    13700004: eye2
+    13700006: hair
+    13700008: hair3
+    13700010: hair4
+    13700012: hair5
+    13700014: hair6
+    13700016: hair7
+    13700018: hat
+    13700020: head1
+    13700022: headp1
+    13700024: headp2
+    13700026: headp3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
