@@ -26,7 +26,8 @@ public class Collectible : MonoBehaviour {
             {
                 player.heat = player.heat - 3;
             }
-            player.points = player.points + 5;
+			//Upped to 1000 because why not.
+            player.points = player.points + 1000;
             Destroy(gameObject);
         }
     }

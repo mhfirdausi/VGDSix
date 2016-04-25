@@ -82,8 +82,7 @@ public class player : MonoBehaviour {
         
 
 		//Points collection - Turner
-		pointsText.text = "POINTS: " + points.ToString();
-		pointsText2.text = "POINTS: " + points.ToString();
+		pointsText.text = points.ToString();
         
     }
 
