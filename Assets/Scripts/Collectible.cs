@@ -3,15 +3,14 @@ using System.Collections;
 
 public class Collectible : MonoBehaviour {
 
-    
-
     public float speed = 15f;
-    // Use this for initialization
+
+    public AudioSource collectSound;
+    public Renderer myRenderer;
     void Start () {
-	
+        collectSound = GetComponent<AudioSource>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
        
         transform.Rotate(Vector3.up * speed * Time.deltaTime);
@@ -22,13 +21,14 @@ public class Collectible : MonoBehaviour {
 
         if (other.gameObject.CompareTag("Player"))
         {
+            collectSound.Play();
             if (player.heat >= 2)
             {
                 player.heat = player.heat - 3;
             }
 			//Upped to 1000 because why not.
             player.points = player.points + 1000;
-            Destroy(gameObject);
+            myRenderer.enabled = false;
         }
     }
 }

@@ -34,10 +34,18 @@ GameObject:
   - 114: {fileID: 11498018}
   - 114: {fileID: 11497474}
   - 114: {fileID: 11467320}
-  - 114: {fileID: 11461266}
-  - 114: {fileID: 11475312}
   - 114: {fileID: 11439636}
   - 114: {fileID: 11428530}
+  - 114: {fileID: 11466810}
+  - 114: {fileID: 11439856}
+  - 114: {fileID: 11450024}
+  - 114: {fileID: 11488402}
+  - 114: {fileID: 11442372}
+  - 114: {fileID: 11477776}
+  - 114: {fileID: 11485822}
+  - 114: {fileID: 11461322}
+  - 114: {fileID: 11494186}
+  - 114: {fileID: 11449168}
   m_Layer: 0
   m_Name: InAudio AudioSave
   m_TagString: Untagged
@@ -391,7 +399,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _clip: {fileID: 0}
+  _clip: {fileID: 8300000, guid: e7faddfd31a60b5469459c27d2aacc2f, type: 3}
   LoadedFromAssetBundle: 0
 --- !u!114 &11433386
 MonoBehaviour:
@@ -556,7 +564,7 @@ MonoBehaviour:
   _type: 2
   _nodeData: {fileID: 11428530}
   Name: Jump
-  _parent: {fileID: 11461266}
+  _parent: {fileID: 11477564}
   OverrideParentMixerGroup: 0
   MixerGroup: {fileID: 0}
   _children: []
@@ -584,6 +592,91 @@ MonoBehaviour:
   _children:
   - {fileID: 11455148}
   - {fileID: 11415766}
+  Filtered: 0
+  FoldedOut: 0
+  ScrollPosition: {x: 0, y: 0}
+--- !u!114 &11439856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc14a519ae4a03499b0c9ddb2abae5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomVolume: 0
+  MinVolume: 1
+  MaxVolume: 1
+  RandomizeDelay: 0
+  InitialDelayMin: 0
+  InitialDelayMax: 0
+  RandomPitch: 0
+  MinPitch: 1
+  MaxPitch: 1
+  RandomBlend: 0
+  MinBlend: 1
+  MaxBlend: 1
+  Loop: 0
+  LoopInfinite: 0
+  RandomizeLoops: 0
+  MinIterations: 1
+  MaxIterations: 1
+  OverrideAttenuation: 0
+  MinDistance: 1
+  MaxDistance: 500
+  RolloffMode: 0
+  LimitInstances: 0
+  MaxInstances: 1
+  InstanceStealingTypes: 0
+  Priority: 128
+  RandomSecondsOffset: 0
+  MinSecondsOffset: 0
+  MaxSecondsOffset: 0
+  SelectedArea: 0
+  FalloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _clip: {fileID: 8300000, guid: 1bb3e500cf6b1944287e9fbdbacec5bd, type: 3}
+  LoadedFromAssetBundle: 0
+--- !u!114 &11442372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 975133138
+  _type: 2
+  _nodeData: {fileID: 11477776}
+  Name: Powerup
+  _parent: {fileID: 11477564}
+  OverrideParentMixerGroup: 0
+  MixerGroup: {fileID: 0}
+  _children: []
   Filtered: 0
   FoldedOut: 0
   ScrollPosition: {x: 0, y: 0}
@@ -628,6 +721,91 @@ MonoBehaviour:
   _nodeData: {fileID: 11436110}
   Name: Empty Example Audio Node
   _parent: {fileID: 11415804}
+  OverrideParentMixerGroup: 0
+  MixerGroup: {fileID: 0}
+  _children: []
+  Filtered: 0
+  FoldedOut: 0
+  ScrollPosition: {x: 0, y: 0}
+--- !u!114 &11449168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc14a519ae4a03499b0c9ddb2abae5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomVolume: 0
+  MinVolume: 1
+  MaxVolume: 1
+  RandomizeDelay: 0
+  InitialDelayMin: 0
+  InitialDelayMax: 0
+  RandomPitch: 0
+  MinPitch: 1
+  MaxPitch: 1
+  RandomBlend: 0
+  MinBlend: 1
+  MaxBlend: 1
+  Loop: 0
+  LoopInfinite: 0
+  RandomizeLoops: 0
+  MinIterations: 1
+  MaxIterations: 1
+  OverrideAttenuation: 0
+  MinDistance: 1
+  MaxDistance: 500
+  RolloffMode: 0
+  LimitInstances: 0
+  MaxInstances: 1
+  InstanceStealingTypes: 0
+  Priority: 128
+  RandomSecondsOffset: 0
+  MinSecondsOffset: 0
+  MaxSecondsOffset: 0
+  SelectedArea: 0
+  FalloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _clip: {fileID: 8300000, guid: 09fb8d1aafc4b3a45b2e61a06a8defe9, type: 3}
+  LoadedFromAssetBundle: 0
+--- !u!114 &11450024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1478597748
+  _type: 2
+  _nodeData: {fileID: 11488402}
+  Name: Dead
+  _parent: {fileID: 11477564}
   OverrideParentMixerGroup: 0
   MixerGroup: {fileID: 0}
   _children: []
@@ -865,7 +1043,70 @@ MonoBehaviour:
     m_RotationOrder: 4
   _clip: {fileID: 0}
   LoadedFromAssetBundle: 0
---- !u!114 &11461266
+--- !u!114 &11461322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc14a519ae4a03499b0c9ddb2abae5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomVolume: 0
+  MinVolume: 1
+  MaxVolume: 1
+  RandomizeDelay: 0
+  InitialDelayMin: 0
+  InitialDelayMax: 0
+  RandomPitch: 0
+  MinPitch: 1
+  MaxPitch: 1
+  RandomBlend: 0
+  MinBlend: 1
+  MaxBlend: 1
+  Loop: 0
+  LoopInfinite: 0
+  RandomizeLoops: 0
+  MinIterations: 1
+  MaxIterations: 1
+  OverrideAttenuation: 0
+  MinDistance: 1
+  MaxDistance: 500
+  RolloffMode: 0
+  LimitInstances: 0
+  MaxInstances: 1
+  InstanceStealingTypes: 0
+  Priority: 128
+  RandomSecondsOffset: 0
+  MinSecondsOffset: 0
+  MaxSecondsOffset: 0
+  SelectedArea: 0
+  FalloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _clip: {fileID: 8300000, guid: d5bf0d1a3565f9c45af3441f3911c50c, type: 3}
+  LoadedFromAssetBundle: 0
+--- !u!114 &11466810
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -876,18 +1117,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _guid: 1181496086
-  _type: 3
-  _nodeData: {fileID: 11475312}
-  Name: PlayerSounds
+  _guid: 597738373
+  _type: 2
+  _nodeData: {fileID: 11439856}
+  Name: Collectible
   _parent: {fileID: 11477564}
   OverrideParentMixerGroup: 0
   MixerGroup: {fileID: 0}
-  _children:
-  - {fileID: 11439636}
+  _children: []
   Filtered: 0
   FoldedOut: 1
-  ScrollPosition: {x: 0, y: 0}
+  ScrollPosition: {x: 78, y: 0}
 --- !u!114 &11467320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1014,7 +1254,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   weights: 320000003200000032000000
   doNotRepeat: 1
---- !u!114 &11475312
+--- !u!114 &11477564
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1022,7 +1262,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 124242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da080403990c5ad44870e8ac68f3ea73, type: 3}
+  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 478519342
+  _type: 0
+  _nodeData: {fileID: 11406598}
+  Name: Audio Root
+  _parent: {fileID: 0}
+  OverrideParentMixerGroup: 0
+  MixerGroup: {fileID: 0}
+  _children:
+  - {fileID: 11415804}
+  - {fileID: 11439636}
+  - {fileID: 11466810}
+  - {fileID: 11450024}
+  - {fileID: 11485822}
+  - {fileID: 11442372}
+  - {fileID: 11494186}
+  Filtered: 0
+  FoldedOut: 1
+  ScrollPosition: {x: 0, y: 0}
+--- !u!114 &11477690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 115807716
+  _type: 4
+  _nodeData: {fileID: 11416162}
+  Name: Sequence-Sound Example
+  _parent: {fileID: 11415804}
+  OverrideParentMixerGroup: 0
+  MixerGroup: {fileID: 0}
+  _children:
+  - {fileID: 11455360}
+  - {fileID: 11497474}
+  Filtered: 0
+  FoldedOut: 0
+  ScrollPosition: {x: 0, y: 0}
+--- !u!114 &11477776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc14a519ae4a03499b0c9ddb2abae5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RandomVolume: 0
@@ -1075,9 +1368,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  weights: 32000000
-  doNotRepeat: 1
---- !u!114 &11477564
+  _clip: {fileID: 0}
+  LoadedFromAssetBundle: 0
+--- !u!114 &11485822
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1088,40 +1381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _guid: 478519342
-  _type: 0
-  _nodeData: {fileID: 11406598}
-  Name: Audio Root
-  _parent: {fileID: 0}
+  _guid: 271331052
+  _type: 2
+  _nodeData: {fileID: 11461322}
+  Name: Bounce
+  _parent: {fileID: 11477564}
   OverrideParentMixerGroup: 0
   MixerGroup: {fileID: 0}
-  _children:
-  - {fileID: 11415804}
-  - {fileID: 11461266}
-  Filtered: 0
-  FoldedOut: 1
-  ScrollPosition: {x: 0, y: 0}
---- !u!114 &11477690
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _guid: 115807716
-  _type: 4
-  _nodeData: {fileID: 11416162}
-  Name: Sequence-Sound Example
-  _parent: {fileID: 11415804}
-  OverrideParentMixerGroup: 0
-  MixerGroup: {fileID: 0}
-  _children:
-  - {fileID: 11455360}
-  - {fileID: 11497474}
+  _children: []
   Filtered: 0
   FoldedOut: 0
   ScrollPosition: {x: 0, y: 0}
@@ -1141,6 +1408,91 @@ MonoBehaviour:
   BankLink: {fileID: 11460484, guid: 119a1922ffd85ff49a97b6153c0cc73a, type: 2}
   VolumeMin: 1
   runtimeVolume: 1
+--- !u!114 &11488402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc14a519ae4a03499b0c9ddb2abae5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomVolume: 0
+  MinVolume: 1
+  MaxVolume: 1
+  RandomizeDelay: 0
+  InitialDelayMin: 0
+  InitialDelayMax: 0
+  RandomPitch: 0
+  MinPitch: 1
+  MaxPitch: 1
+  RandomBlend: 0
+  MinBlend: 1
+  MaxBlend: 1
+  Loop: 0
+  LoopInfinite: 0
+  RandomizeLoops: 0
+  MinIterations: 1
+  MaxIterations: 1
+  OverrideAttenuation: 0
+  MinDistance: 1
+  MaxDistance: 500
+  RolloffMode: 0
+  LimitInstances: 0
+  MaxInstances: 1
+  InstanceStealingTypes: 0
+  Priority: 128
+  RandomSecondsOffset: 0
+  MinSecondsOffset: 0
+  MaxSecondsOffset: 0
+  SelectedArea: 0
+  FalloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0.1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _clip: {fileID: 8300000, guid: 18d2428b3b516d74baabd932bfd59270, type: 3}
+  LoadedFromAssetBundle: 0
+--- !u!114 &11494186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 155685679
+  _type: 2
+  _nodeData: {fileID: 11449168}
+  Name: Powerdown
+  _parent: {fileID: 11477564}
+  OverrideParentMixerGroup: 0
+  MixerGroup: {fileID: 0}
+  _children: []
+  Filtered: 0
+  FoldedOut: 0
+  ScrollPosition: {x: 0, y: 0}
 --- !u!114 &11494482
 MonoBehaviour:
   m_ObjectHideFlags: 1

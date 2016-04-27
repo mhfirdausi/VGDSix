@@ -14,7 +14,6 @@ GameObject:
   - 54: {fileID: 5481206}
   - 64: {fileID: 6435608}
   - 114: {fileID: 11422774}
-  - 114: {fileID: 11427252}
   m_Layer: 0
   m_Name: Gold Cube
   m_TagString: Untagged
@@ -185,8 +184,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 20, z: 1}
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!65 &6595160
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -205,20 +204,9 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146882}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0bf6e41666ef4c4cadbc0544ac6d742, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11427252
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 146882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b71fb20612fd34584d20c13c0c52f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11482064

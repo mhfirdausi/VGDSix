@@ -11,6 +11,15 @@ GameObject:
   - 114: {fileID: 11461978}
   - 114: {fileID: 11428958}
   - 114: {fileID: 11479846}
+  - 114: {fileID: 11430282}
+  - 114: {fileID: 11406458}
+  - 114: {fileID: 11474348}
+  - 114: {fileID: 11434556}
+  - 114: {fileID: 11465800}
+  - 114: {fileID: 11439626}
+  - 114: {fileID: 11430266}
+  - 114: {fileID: 11429734}
+  - 114: {fileID: 11433596}
   m_Layer: 0
   m_Name: InAudio EventSave
   m_TagString: Untagged
@@ -30,6 +39,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11406458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1066247696
+  _type: 3
+  Name: PowerDownEffect
+  _parent: {fileID: 11428958}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 11430266}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
 --- !u!114 &11428958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48,10 +79,122 @@ MonoBehaviour:
   Delay: 0
   _children:
   - {fileID: 11479846}
+  - {fileID: 11430282}
+  - {fileID: 11406458}
+  - {fileID: 11474348}
+  - {fileID: 11434556}
   _actionList: []
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0
+--- !u!114 &11429734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 11450024, guid: 277accaf755389c46959011af86ec38b, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &11430266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 11494186, guid: 277accaf755389c46959011af86ec38b, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &11430282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 2121147126
+  _type: 3
+  Name: CollectEffect
+  _parent: {fileID: 11428958}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 11439626}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &11433596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 11439636, guid: 277accaf755389c46959011af86ec38b, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &11434556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 503215017
+  _type: 3
+  Name: JumpEffect
+  _parent: {fileID: 11428958}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 11433596}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &11439626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 11466810, guid: 277accaf755389c46959011af86ec38b, type: 2}
+  Fadetime: 0
+  TweenType: 1
 --- !u!114 &11461978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,6 +217,44 @@ MonoBehaviour:
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0
+--- !u!114 &11465800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 11485822, guid: 277accaf755389c46959011af86ec38b, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &11474348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 781096256
+  _type: 3
+  Name: DeadEffect
+  _parent: {fileID: 11428958}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 11429734}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
 --- !u!114 &11479846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,7 +272,8 @@ MonoBehaviour:
   _parent: {fileID: 11428958}
   Delay: 0
   _children: []
-  _actionList: []
+  _actionList:
+  - {fileID: 11465800}
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0

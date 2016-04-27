@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BoxFall : MonoBehaviour {
@@ -19,5 +19,13 @@ public class BoxFall : MonoBehaviour {
     {
         rb.useGravity = true;
         rb.isKinematic = false;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "DeathPlane")
+        {
+            Destroy(gameObject);
+        }
     }
 }

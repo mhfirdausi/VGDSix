@@ -49,6 +49,16 @@ MonoBehaviour:
   _bankData:
   - AudioNode: {fileID: 11439636, guid: 277accaf755389c46959011af86ec38b, type: 2}
     MusicNode: {fileID: 0}
+  - AudioNode: {fileID: 11466810, guid: 277accaf755389c46959011af86ec38b, type: 2}
+    MusicNode: {fileID: 0}
+  - AudioNode: {fileID: 11450024, guid: 277accaf755389c46959011af86ec38b, type: 2}
+    MusicNode: {fileID: 0}
+  - AudioNode: {fileID: 11442372, guid: 277accaf755389c46959011af86ec38b, type: 2}
+    MusicNode: {fileID: 0}
+  - AudioNode: {fileID: 11485822, guid: 277accaf755389c46959011af86ec38b, type: 2}
+    MusicNode: {fileID: 0}
+  - AudioNode: {fileID: 11494186, guid: 277accaf755389c46959011af86ec38b, type: 2}
+    MusicNode: {fileID: 0}
   FoldedOut: 1
   Filtered: 0
 --- !u!114 &11476860

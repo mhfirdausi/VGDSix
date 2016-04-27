@@ -40,11 +40,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioGUIData:
-    SelectedNode: 1181496086
-    Position: {x: 0, y: 0}
+    SelectedNode: 597738373
+    Position: {x: 0, y: 15}
   EventGUIData:
-    SelectedNode: 833473775
-    Position: {x: 0, y: 0}
+    SelectedNode: 2121147126
+    Position: {x: 0, y: 15}
   MusicGUIData:
     SelectedNode: 192187249
     Position: {x: 0, y: 2}
