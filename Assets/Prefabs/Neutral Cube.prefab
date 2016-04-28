@@ -37,6 +37,7 @@ GameObject:
   - 23: {fileID: 2308420}
   - 54: {fileID: 5474986}
   - 114: {fileID: 11482064}
+  - 82: {fileID: 8235486}
   m_Layer: 0
   m_Name: NeutralPlate
   m_TagString: Untagged
@@ -201,6 +202,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &8235486
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173216}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11410758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,6 +317,13 @@ MonoBehaviour:
   slow: {fileID: 183650, guid: 89ed256ce745f5e4090625675840b2f6, type: 2}
   speed: {fileID: 182210, guid: ff3759872d9799340971658c8dbc6101, type: 2}
   bounce: {fileID: 138544, guid: e5d622eee0c5db343830398b8b50665a, type: 2}
+  red: {fileID: 0}
+  blue: {fileID: 0}
+  green: {fileID: 0}
+  lblue: {fileID: 0}
+  basic: {fileID: 0}
+  number: 0
+  next: 0
 --- !u!114 &11427252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +347,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidBody: {fileID: 5453016, guid: 676ca6cf0c667c94ea861ff2e4e33339, type: 2}
+  blueBlockSound: {fileID: 8300000, guid: e7faddfd31a60b5469459c27d2aacc2f, type: 3}
+  redBlockSound: {fileID: 8300000, guid: efcd61177a16a694a860b8ad733a5127, type: 3}
+  greenBlockSound: {fileID: 8300000, guid: b160807de88e7734b85c1ce44512b105, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

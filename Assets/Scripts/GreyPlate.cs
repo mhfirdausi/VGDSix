@@ -12,20 +12,25 @@ public class GreyPlate : MonoBehaviour
 
     public Rigidbody playerRigidBody;
 
-    private MusicLevelController musicController;
+    public AudioClip blueBlockSound;
+    public AudioClip redBlockSound;
+    public AudioClip greenBlockSound;
 
+    private MusicLevelController musicController;
+    private AudioSource graySoundSource;
     private Coroutine greyPlateCoroutine;
 
     // Use this for initialization
     void Awake()
     {
-        baseSpeed = player.playerSpeed;
-        speedBoost = player.playerSpeed * player.speedUpMult;
-        speedNerf = player.playerSpeed * player.speedDownMult;
-        playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
         try
         {
             musicController = GameObject.FindGameObjectWithTag("MusicController").GetComponent<MusicLevelController>();
+            baseSpeed = player.playerSpeed;
+            speedBoost = player.playerSpeed * player.speedUpMult;
+            speedNerf = player.playerSpeed * player.speedDownMult;
+            playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
+            graySoundSource = GetComponent<AudioSource>();
         }
         catch(System.NullReferenceException e)
         {
@@ -42,8 +47,15 @@ public class GreyPlate : MonoBehaviour
             if (greyPlateCoroutine != null)
                 StopCoroutine(greyPlateCoroutine);
             greyPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
-            if(musicController.canSlowDown)
+            if (musicController.canSlowDown)
+            {
+                graySoundSource.clip = redBlockSound;
+                if(!graySoundSource.isPlaying)
+                {
+                    graySoundSource.Play();
+                }
                 musicController.slowDownMusicEvent.Invoke();
+            }
             //hitChangedToRed.Invoke();
         }
         else if (speedChange == true && player.greenPower == true && withinBounds())
@@ -52,8 +64,15 @@ public class GreyPlate : MonoBehaviour
             if (greyPlateCoroutine != null)
                 StopCoroutine(greyPlateCoroutine);
             greyPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
-            if(musicController.canSpeedUp)
+            if (musicController.canSpeedUp)
+            {
+                graySoundSource.clip = greenBlockSound;
+                if (!graySoundSource.isPlaying)
+                {
+                    graySoundSource.Play();
+                }
                 musicController.speedUpMusicEvent.Invoke();
+            }
             //hitChangedToGreen.Invoke();
         }
     }
@@ -68,8 +87,10 @@ public class GreyPlate : MonoBehaviour
     {
         speedChange = false;
         player.playerSpeed = baseSpeed;
-        if(musicController.canResumeNormal)
+        if (musicController.canResumeNormal)
+        {
             musicController.playNormalMusicEvent.Invoke();
+        }
         //resumeNormal.Invoke();
     }
 
@@ -77,11 +98,20 @@ public class GreyPlate : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && player.bluePower == true && withinBounds() == true)
         {
+            graySoundSource.clip = blueBlockSound;
+            if(!graySoundSource.isPlaying)
+            {
+                graySoundSource.Play();
+            }
             playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.z);
         }
         else if (other.gameObject.CompareTag("Player") && (player.greenPower == true || player.redPower == true))
         {
             speedChange = true;
+        }
+        else
+        {
+            graySoundSource.clip = null;
         }
     }
 

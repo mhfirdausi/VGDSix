@@ -13,8 +13,12 @@ public class GreenPlate : MonoBehaviour
 
     public Rigidbody playerRigidBody;
 
-    private MusicLevelController musicController;
+    public AudioClip blueBlockSound;
+    public AudioClip redBlockSound;
+    public AudioClip greenBlockSound;
 
+    private MusicLevelController musicController;
+    private AudioSource greenSoundSource;
     private Coroutine greenPlateCoroutine;
 
     void Awake()
@@ -22,10 +26,11 @@ public class GreenPlate : MonoBehaviour
         baseSpeed = player.playerSpeed;
         speedBoost = player.playerSpeed * player.speedUpMult;
         speedNerf = player.playerSpeed * player.speedDownMult;
-        playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
         try
         {
             musicController = GameObject.FindGameObjectWithTag("MusicController").GetComponent<MusicLevelController>();
+            playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
+            greenSoundSource = GetComponent<AudioSource>();
         }
         catch (System.NullReferenceException e)
         {
@@ -43,14 +48,29 @@ public class GreenPlate : MonoBehaviour
                 StopCoroutine(greenPlateCoroutine);
             greenPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
             if (musicController.canSlowDown)
+            {
+                greenSoundSource.clip = redBlockSound;
+                if(!greenSoundSource.isPlaying)
+                {
+                    greenSoundSource.Play();
+                }
                 musicController.slowDownMusicEvent.Invoke();
+            }
+                
         }
         else if (speedChange == true)
         {
             player.playerSpeed = speedBoost;
             greenPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
             if (musicController.canSpeedUp)
+            {
+                greenSoundSource.clip = greenBlockSound;
+                if(!greenSoundSource.isPlaying)
+                {
+                    greenSoundSource.Play();
+                }
                 musicController.speedUpMusicEvent.Invoke();
+            }
         }
     }
 
@@ -72,6 +92,11 @@ public class GreenPlate : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && player.bluePower == true && withinBounds())
         {
+            greenSoundSource.clip = blueBlockSound;
+            if(!greenSoundSource.isPlaying)
+            {
+                greenSoundSource.Play();
+            }
             playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, player.blueBoxJump, playerRigidBody.velocity.z);
         }
         else if (other.gameObject.CompareTag("Player"))
