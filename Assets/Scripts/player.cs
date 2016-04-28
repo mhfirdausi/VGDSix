@@ -185,8 +185,6 @@ public class player : MonoBehaviour {
 		VictoryMenu.enabled = true;
 	}
 
-
-
     void OnCollisionStay()
     {
         //isFalling = false;
@@ -204,5 +202,10 @@ public class player : MonoBehaviour {
         {
             TriggerDeath();
         }
+
+		if (other.gameObject.tag == "GoldCubeFlag")
+		{
+			onVictory();
+		}
     }
 }

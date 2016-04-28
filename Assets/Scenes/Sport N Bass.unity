@@ -817,7 +817,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -10470,7 +10469,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -18480,9 +18478,8 @@ GameObject:
   - 224: {fileID: 490588484}
   - 222: {fileID: 490588487}
   - 114: {fileID: 490588486}
-  - 114: {fileID: 490588485}
   m_Layer: 5
-  m_Name: Points
+  m_Name: Max Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18505,39 +18502,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -87.4}
   m_SizeDelta: {x: 811.1, y: 121.1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &490588485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 490588483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc030a80b9ffc1643adba954caeed5a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsText: {fileID: 490588486}
-  pointsText2: {fileID: 0}
-  countdownText: {fileID: 0}
-  pointsAtDeath: {fileID: 0}
-  maxSpeed: 110
-  playerRigidBody: {fileID: 0}
-  isFalling: 0
-  jumps: 0
-  deathMenu: {fileID: 0}
-  VictoryMenu: {fileID: 0}
-  countdown: {fileID: 0}
-  levelBottom: 30
-  onPlayerFall:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  onPlayerQuit:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &490588486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32767,7 +32731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsText: {fileID: 983828929}
-  pointsText2: {fileID: 1912201440}
+  pointsText2: {fileID: 490588486}
   countdownText: {fileID: 336250989}
   pointsAtDeath: {fileID: 0}
   maxSpeed: 110
@@ -56184,8 +56148,8 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -334.4, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -375.1, y: 198.5}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1672886709
 MonoBehaviour:
@@ -61824,7 +61788,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -61845,6 +61808,7 @@ RectTransform:
   - {fileID: 253547755}
   - {fileID: 983828928}
   - {fileID: 1672886708}
+  - {fileID: 2014804625}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_AnchorMin: {x: 0, y: 0}
@@ -63084,7 +63048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1912201438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -63099,7 +63063,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -87.39996}
+  m_AnchoredPosition: {x: 0, y: 122.2}
   m_SizeDelta: {x: 811.1, y: 121.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1912201439
@@ -64554,6 +64518,14 @@ Prefab:
     - target: {fileID: 435060, guid: 77277f4369241f641a23cc966bf9331d, type: 2}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542902, guid: 77277f4369241f641a23cc966bf9331d, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429480, guid: 77277f4369241f641a23cc966bf9331d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77277f4369241f641a23cc966bf9331d, type: 2}
@@ -66953,6 +66925,81 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 482206, guid: e5d622eee0c5db343830398b8b50665a, type: 2}
   m_PrefabInternal: {fileID: 815151811}
+--- !u!1 &2014804624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 2014804625}
+  - 222: {fileID: 2014804627}
+  - 114: {fileID: 2014804626}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2014804625
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014804624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1878038577}
+  m_RootOrder: 7
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -311.41, y: 155.77}
+  m_SizeDelta: {x: 160, y: 46.55}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2014804626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014804624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 6672147afc5024813ad07939147e3b7f, type: 3}
+    m_FontSize: 8
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'QUEUE TEST
+
+    PLEASE IGNORE'
+--- !u!222 &2014804627
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014804624}
 --- !u!1001 &2021079921
 Prefab:
   m_ObjectHideFlags: 0
