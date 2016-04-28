@@ -24,7 +24,6 @@ public class SwapBlock : MonoBehaviour {
     {
         blocks = new Queue();
 		basic = basic.GetComponent<Image> ();
-		basic.enabled = true;
     }
 
     void Update()
@@ -33,7 +32,7 @@ public class SwapBlock : MonoBehaviour {
         {
             number = UnityEngine.Random.Range(0, 3);
             blocks.Enqueue(number);
-			QueueIE (number);
+			QueueIE ();
         }
 
     }
@@ -63,13 +62,13 @@ public class SwapBlock : MonoBehaviour {
     }
 
 	//Block queue.
-	void QueueIE(int numero) 
+	void QueueIE() 
 	{
-		if (numero == 0) 
+		if (blocks.Peek().Equals(0)) 
 		{
 			basic.sprite = red;
 		} 
-		else if (numero == 1) 
+		else if (blocks.Peek().Equals(1)) 
 		{
 			basic.sprite = green;
 		} 
