@@ -5,7 +5,7 @@ public class RedPower : MonoBehaviour {
     public static int redPowerTimer = 3;
     public static bool routinerunning = false;
 
-    public float speed = 10f;
+    public float speed = 20f;
 
     private Coroutine redCoroutine;
     // Use this for initialization

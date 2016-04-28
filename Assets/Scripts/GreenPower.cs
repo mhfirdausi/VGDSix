@@ -5,7 +5,7 @@ public class GreenPower : MonoBehaviour {
     public static int greenPowerTimer = 3;
     public static bool routinerunning = false;
 
-    public float speed = 10f;
+    public float speed = 20f;
 
     private Coroutine greenCoroutine;
     // Use this for initialization

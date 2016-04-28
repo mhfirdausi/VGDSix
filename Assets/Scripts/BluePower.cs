@@ -5,7 +5,7 @@ public class BluePower : MonoBehaviour {
    public static int bluePowerTimer = 3;
    public static bool routinerunning = false;
 
-    public float speed = 10f;
+    public float speed = 20f;
     private Coroutine blueCoroutine;
     // Use this for initialization
     void Start()

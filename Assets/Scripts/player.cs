@@ -65,7 +65,7 @@ public class player : MonoBehaviour {
         //jump
         if (Input.GetKeyDown(KeyCode.Space) && !(Input.GetKey("z")))
         {
-           if (isFalling == false || jumps < 2)
+           if (isFalling == false || jumps < 1)
             {
                 playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, jumpHeight, playerRigidBody.velocity.y);
                 jumps++;
