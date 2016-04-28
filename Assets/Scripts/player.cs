@@ -12,6 +12,7 @@ public class player : MonoBehaviour {
 	public Text pointsText;
 	public Text pointsText2;
 	public Text countdownText;
+	public Text pointsAtDeath;
 
     public static float myLocationZ;
 
@@ -38,6 +39,7 @@ public class player : MonoBehaviour {
     public static float heat;
 
     public Canvas deathMenu;
+	public Canvas VictoryMenu;
     public Text countdown;
 
     public float levelBottom = 30f;
@@ -50,6 +52,7 @@ public class player : MonoBehaviour {
 		deathMenu = deathMenu.GetComponent<Canvas> (); 
 		deathMenu.enabled = false;
 		countdown.enabled = false;
+		VictoryMenu.enabled = false;
 
         heat = 0;
         playerSpeed = 23.8095238095f;
@@ -83,6 +86,7 @@ public class player : MonoBehaviour {
 
 		//Points collection - Turner
 		pointsText.text = points.ToString();
+		pointsText2.text = maxpoints.ToString();
         
     }
 
@@ -141,12 +145,12 @@ public class player : MonoBehaviour {
     }
 
 	void reload() {
-		StartCoroutine ("Wait");
 		heat = 0;
 		if (points > maxpoints) {
-			points = maxpoints;
+			maxpoints = points;
 		}
 		points = 0;
+		StartCoroutine ("Wait");
 	}
 
 	IEnumerator Wait()
@@ -175,6 +179,13 @@ public class player : MonoBehaviour {
         StartCoroutine("HailMary");
         reload();
     }
+
+	void onVictory()
+	{
+		VictoryMenu.enabled = true;
+	}
+
+
 
     void OnCollisionStay()
     {
