@@ -8,10 +8,12 @@ public class RedPower : MonoBehaviour {
     public float speed = 20f;
 
     private Coroutine redCoroutine;
-    // Use this for initialization
-    void Start()
-    {
+    private AudioSource redSound;
 
+    void Awake()
+    {
+        redSound = GetComponent<AudioSource>();
+        redSound.volume = 0.25f;
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class RedPower : MonoBehaviour {
             //forgive the spaghetti, the below has to do with powerups effecting blocks within a z range.
             player.myLocationZ = GameObject.Find("playerCylinder").transform.position.z;
             this.GetComponent<Renderer>().enabled = false;
+            redSound.Play();
         }
     }
 

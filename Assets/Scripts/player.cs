@@ -46,6 +46,12 @@ public class player : MonoBehaviour {
     public UnityEvent onPlayerFall;
     public UnityEvent onPlayerQuit;
 
+    private AudioSource playerJumpSound;
+
+    void Awake()
+    {
+        playerJumpSound = GetComponent<AudioSource>();
+    }
     void Start () {
         Time.timeScale = 1f;
         dir = Vector3.forward;
@@ -72,6 +78,7 @@ public class player : MonoBehaviour {
             {
                 playerRigidBody.velocity = new Vector3(playerRigidBody.velocity.x, jumpHeight, playerRigidBody.velocity.y);
                 jumps++;
+                playerJumpSound.Play();
             }
         }
 
@@ -112,7 +119,7 @@ public class player : MonoBehaviour {
         {
             isFalling = false;
         }
-        Debug.Log(playerRigidBody.velocity.y);
+        //Debug.Log(playerRigidBody.velocity.y);
         
 
         //jetpack

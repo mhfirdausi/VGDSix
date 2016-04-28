@@ -7,10 +7,12 @@ public class BluePower : MonoBehaviour {
 
     public float speed = 20f;
     private Coroutine blueCoroutine;
-    // Use this for initialization
-    void Start()
+    private AudioSource blueSound;
+    
+    void Awake()
     {
-        
+        blueSound = GetComponent<AudioSource>();
+        //blueSound.volume = 0.25f;
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class BluePower : MonoBehaviour {
             player.bluePower = true;
             player.greenPower = false;
             player.redPower = false;
-
+            blueSound.Play();
             //forgive the spaghetti, the below has to do with powerups effecting blocks within a z range.
             player.myLocationZ = GameObject.Find("playerCylinder").transform.position.z;
             this.GetComponent<Renderer>().enabled = false;

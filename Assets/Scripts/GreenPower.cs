@@ -8,14 +8,16 @@ public class GreenPower : MonoBehaviour {
     public float speed = 20f;
 
     private Coroutine greenCoroutine;
-    // Use this for initialization
-    void Start () {
-	
-	}
+    private AudioSource greenSound;
+    void Awake()
+    {
+        greenSound = GetComponent<AudioSource>();
+        greenSound.volume = 0.25f;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (player.greenPower == true)
+        if (player.greenPower && !routinerunning)
         {
             greenCoroutine = StartCoroutine(greenPowerTimerMethod());
         }
@@ -36,6 +38,7 @@ public class GreenPower : MonoBehaviour {
             //forgive the spaghetti, the below has to do with powerups effecting blocks within a z range.
             player.myLocationZ = GameObject.Find("playerCylinder").transform.position.z;
             this.GetComponent<Renderer>().enabled = false;
+            greenSound.Play();
         }
     }
 

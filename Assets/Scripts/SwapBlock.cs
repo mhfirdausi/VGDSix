@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System;
@@ -15,7 +15,7 @@ public class SwapBlock : MonoBehaviour {
 	public Sprite green;
 	public Sprite lblue;
 	public Image basic;
-    public Queue blocks;
+    public static Queue blocks;
     private int cube;
     public int number;
 	public int next;
@@ -23,7 +23,8 @@ public class SwapBlock : MonoBehaviour {
     void Start()
     {
         blocks = new Queue();
-		basic = basic.GetComponent<Image> ();
+        if(gameObject.GetComponent<Image>() != null)
+            basic = basic.GetComponent<Image>();
     }
 
     void Update()
@@ -64,7 +65,8 @@ public class SwapBlock : MonoBehaviour {
 	//Block queue.
 	void QueueIE() 
 	{
-		if (blocks.Peek().Equals(0)) 
+        Debug.Log("Queue: " + blocks.Peek());
+        if (blocks.Peek().Equals(0)) 
 		{
 			basic.sprite = red;
 		} 

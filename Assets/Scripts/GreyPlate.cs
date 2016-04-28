@@ -42,17 +42,18 @@ public class GreyPlate : MonoBehaviour
             if (greyPlateCoroutine != null)
                 StopCoroutine(greyPlateCoroutine);
             greyPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
-            musicController.slowDownMusicEvent.Invoke();
+            if(musicController.canSlowDown)
+                musicController.slowDownMusicEvent.Invoke();
             //hitChangedToRed.Invoke();
         }
         else if (speedChange == true && player.greenPower == true && withinBounds())
         {
-            Debug.Log("speedchange");
             player.playerSpeed = speedBoost;
             if (greyPlateCoroutine != null)
                 StopCoroutine(greyPlateCoroutine);
             greyPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
-            musicController.speedUpMusicEvent.Invoke();
+            if(musicController.canSpeedUp)
+                musicController.speedUpMusicEvent.Invoke();
             //hitChangedToGreen.Invoke();
         }
     }
@@ -67,7 +68,8 @@ public class GreyPlate : MonoBehaviour
     {
         speedChange = false;
         player.playerSpeed = baseSpeed;
-        musicController.playNormalMusicEvent.Invoke();
+        if(musicController.canResumeNormal)
+            musicController.playNormalMusicEvent.Invoke();
         //resumeNormal.Invoke();
     }
 

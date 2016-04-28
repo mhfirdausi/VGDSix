@@ -42,13 +42,15 @@ public class RedPlate : MonoBehaviour
             if (redPlateCoroutine != null)
                 StopCoroutine(redPlateCoroutine);
             redPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
-            musicController.speedUpMusicEvent.Invoke();
+            if (musicController.canSpeedUp)
+                musicController.speedUpMusicEvent.Invoke();
         }
         else if (speedChange == true)
         {
             player.playerSpeed = speedNerf;
             redPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
-            musicController.slowDownMusicEvent.Invoke();
+            if (musicController.canSlowDown)
+                musicController.slowDownMusicEvent.Invoke();
         }
     }
 
@@ -63,7 +65,8 @@ public class RedPlate : MonoBehaviour
     {
         speedChange = false;
         player.playerSpeed = baseSpeed;
-        musicController.playNormalMusicEvent.Invoke();
+        if (musicController.canResumeNormal)
+            musicController.playNormalMusicEvent.Invoke();
     }
 
     void OnCollisionEnter(Collision other)

@@ -42,13 +42,15 @@ public class GreenPlate : MonoBehaviour
             if (greenPlateCoroutine != null)
                 StopCoroutine(greenPlateCoroutine);
             greenPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
-            musicController.slowDownMusicEvent.Invoke();
+            if (musicController.canSlowDown)
+                musicController.slowDownMusicEvent.Invoke();
         }
         else if (speedChange == true)
         {
             player.playerSpeed = speedBoost;
             greenPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
-            musicController.speedUpMusicEvent.Invoke();
+            if (musicController.canSpeedUp)
+                musicController.speedUpMusicEvent.Invoke();
         }
     }
 
@@ -62,7 +64,8 @@ public class GreenPlate : MonoBehaviour
     {
         speedChange = false;
         player.playerSpeed = baseSpeed;
-        musicController.playNormalMusicEvent.Invoke();
+        if (musicController.canResumeNormal)
+            musicController.playNormalMusicEvent.Invoke();
     }
 
     void OnCollisionEnter(Collision other)

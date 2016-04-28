@@ -15,6 +15,7 @@ public class MusicLevelController : MonoBehaviour {
     private float slowDownSpeed;
     private float speedUpSpeed;
     private player currentPlayer;
+    private Coroutine volumeTweak;
 
     public AudioSource currentSource;
 
@@ -22,7 +23,7 @@ public class MusicLevelController : MonoBehaviour {
     public UnityEvent speedUpMusicEvent;
     public UnityEvent playNormalMusicEvent;
 
-    private bool canSpeedUp, canSlowDown, canResumeNormal;
+    public bool canSpeedUp, canSlowDown, canResumeNormal;
 
     void Start () {
         showWaveform = false;
@@ -82,6 +83,7 @@ public class MusicLevelController : MonoBehaviour {
             if (currentSource != null)
             {
                 currentSource.Play();
+                volumeTweak = StartCoroutine(FastFade());
             }
             else
             {
@@ -107,9 +109,12 @@ public class MusicLevelController : MonoBehaviour {
         if (currentSource != null)
         {
             if(canSlowDown)
-            {
+            {                
                 Debug.Log("Need to slow down!");
+                if (volumeTweak != null)
+                    StopCoroutine(FastFade());
                 currentSource.pitch = slowDownSpeed;
+                volumeTweak = StartCoroutine(FastFade());
                 Debug.Log(currentPlayer.transform.position.z);
                 canSlowDown = false;
                 canSpeedUp = true;
@@ -130,7 +135,10 @@ public class MusicLevelController : MonoBehaviour {
             if(canSpeedUp)
             {
                 Debug.Log("Need to speed up!");
+                if (volumeTweak != null)
+                    StopCoroutine(FastFade());
                 currentSource.pitch = speedUpSpeed;
+                volumeTweak = StartCoroutine(FastFade());
                 Debug.Log(currentPlayer.transform.position.z);
                 canSpeedUp = false;
                 canSlowDown = true;
@@ -150,8 +158,11 @@ public class MusicLevelController : MonoBehaviour {
             {
                 Debug.Log("Normal! Song time: " + currentSource.time);
                 Debug.Log("Expected time: " + DeterminePosition());
+                if (volumeTweak != null)
+                    StopCoroutine(FastFade());
+                volumeTweak = StartCoroutine(FastFade());
                 currentSource.pitch = 1f;
-                currentSource.time = DeterminePosition();
+                currentSource.time = DeterminePosition();  
                 canSpeedUp = true;
                 canSlowDown = true;
                 canResumeNormal = false;
@@ -171,5 +182,25 @@ public class MusicLevelController : MonoBehaviour {
     private float DeterminePosition()
     {
         return currentPlayer.transform.position.z / player.playerSpeed;
+    }
+
+    IEnumerator FastFade()
+    {
+        float startTime = Time.time;
+        float startVolume = currentSource.volume;
+        while (Time.time < startTime + .1f)
+        {
+            currentSource.volume = startVolume - (Time.time - startTime) / .1f;
+            yield return null;
+        }
+
+        startTime = Time.time;
+        
+        while (Time.time < startTime + .1f)
+        {
+            currentSource.volume = 0  + (Time.time - startTime) / .1f;
+            yield return null;
+        }
+        yield return null;
     }
 } 
