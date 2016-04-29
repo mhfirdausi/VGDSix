@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +12,7 @@ public class RandomCube : MonoBehaviour {
     public GameObject player;
     private int x;
     private float timer;
-
+    private bool canSwitch;
     void Awake()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
@@ -20,41 +20,42 @@ public class RandomCube : MonoBehaviour {
         {
             Destroy(this);
         }
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     void Start()
     {
         timer = 0;
+        canSwitch = true;
         Vector3 x = player.transform.position;
     }
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         timer += Time.deltaTime;
         
-        if (timer > 5)
+        if (timer > 5 && canSwitch)
         {
-            if (this.transform.position.z-10<=player.transform.position.z||this.transform.position.z+10>=player.transform.position.z) { 
-                x = UnityEngine.Random.Range(0, 10);
-                if (x == 1)
+            if (player.transform.position.z + 40f >= transform.position.z && player.transform.position.z - transform.position.z < 20f) {
+                x = Random.Range(0, 100);
+                Debug.Log("Z: " + transform.position.z + ", x: " + x);
+                if (x < 3)
                 {
-                    GameObject obj = (GameObject)Instantiate(slow, neutral.transform.position, neutral.transform.rotation);
-                    Destroy(neutral);
-                    
-                }
-                else if (x == 2)
-                {
-                    GameObject obj = (GameObject)Instantiate(speed, neutral.transform.position, neutral.transform.rotation);
-                    Destroy(neutral);
-                                    }
-                else if (x == 3)
-                {
-                    GameObject obj = (GameObject)Instantiate(bounce, neutral.transform.position, neutral.transform.rotation);
-                    Destroy(neutral);
-                    
+                    GameObject obj = (GameObject)Instantiate(slow, transform.position, transform.rotation);
+                    Destroy(gameObject);
 
                 }
-                timer = 0;
+                else if (x < 6)
+                {
+                    GameObject obj = (GameObject)Instantiate(speed, transform.position, transform.rotation);
+                    Destroy(gameObject);
+                }
+                else if (x < 15)
+                {
+                    GameObject obj = (GameObject)Instantiate(bounce, transform.position, transform.rotation);
+                    Destroy(gameObject);
+                }
+                canSwitch = false;
             }
+            timer = 0;
         }
 }
 }
