@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -36,7 +36,14 @@ public class Timer : MonoBehaviour {
 		var seconds = currentTime % 60;
 		var minutesTotal = wholeTime / 60;
 		var secondsTotal = wholeTime % 60;
-
-		timerLabel.text = string.Format ("{0:0}:{1:00}/{0:2}:{3:00}", minutes, seconds, minutesTotal, secondsTotal);
+        if(currentTime == 0)
+        {
+            timerLabel.text = "Get ready!";
+        }
+        else
+        {
+            timerLabel.text = string.Format("{0:0}:{1:00}/{0:2}:{3:00}", minutes, seconds, minutesTotal, secondsTotal);
+        }
+		
 	}
 }
