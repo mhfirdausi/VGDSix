@@ -44,7 +44,7 @@ public class Credits : MonoBehaviour {
 
 	public void noodles ()
 	{
-		Application.OpenURL(" http://www.freesound.org/people/richienoodles/sounds/178555/");
+		Application.OpenURL("http://www.freesound.org/people/richienoodles/sounds/178555/");
 	}
 
 	public void robot ()
