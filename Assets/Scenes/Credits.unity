@@ -1067,8 +1067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ed4bedcd9b647fa834671cc1ca476e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peoplePanel: {fileID: 0}
-  refPanel: {fileID: 0}
+  peoplePanel: {fileID: 241061032}
+  refPanel: {fileID: 120658770}
 --- !u!114 &680961117
 MonoBehaviour:
   m_ObjectHideFlags: 0
