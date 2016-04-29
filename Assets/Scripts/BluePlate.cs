@@ -15,6 +15,7 @@ public class BluePlate : MonoBehaviour {
         currentPlayerScript = myPlayer.GetComponent<player>();
         anim = GameObject.Find("run").GetComponent<Animator>();
         blueBlockSound = GetComponent<AudioSource>();
+        blueBlockSound.volume = 0.5f;
     }
 	
 	// Update is called once per frame

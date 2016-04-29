@@ -33,9 +33,15 @@ public class GreyPlate : MonoBehaviour
             playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
             currentPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
             graySoundSource = GetComponent<AudioSource>();
+            graySoundSource.volume = 0.5f;
         }
         catch(System.NullReferenceException e)
         {
+            Debug.LogError(e.Message);
+        }
+        catch(MissingReferenceException e)
+        {
+            Debug.Log(gameObject.name);
             Debug.LogError(e.Message);
         }
     }

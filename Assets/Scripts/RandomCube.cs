@@ -37,18 +37,18 @@ public class RandomCube : MonoBehaviour {
             if (player.transform.position.z + 40f >= transform.position.z && player.transform.position.z - transform.position.z < 20f) {
                 x = Random.Range(0, 100);
                 Debug.Log("Z: " + transform.position.z + ", x: " + x);
-                if (x < 3)
+                if (x < 7)
                 {
                     GameObject obj = (GameObject)Instantiate(slow, transform.position, transform.rotation);
                     Destroy(gameObject);
 
                 }
-                else if (x < 6)
+                else if (x < 14)
                 {
                     GameObject obj = (GameObject)Instantiate(speed, transform.position, transform.rotation);
                     Destroy(gameObject);
                 }
-                else if (x < 15)
+                else if (x < 28)
                 {
                     GameObject obj = (GameObject)Instantiate(bounce, transform.position, transform.rotation);
                     Destroy(gameObject);

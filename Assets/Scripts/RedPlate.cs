@@ -33,6 +33,7 @@ public class RedPlate : MonoBehaviour
             playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
             currentPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
             redSoundSource = GetComponent<AudioSource>();
+            redSoundSource.volume = 0.5f;
         }
         catch (System.NullReferenceException e)
         {

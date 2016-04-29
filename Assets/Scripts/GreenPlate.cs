@@ -33,6 +33,7 @@ public class GreenPlate : MonoBehaviour
             playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
             currentPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
             greenSoundSource = GetComponent<AudioSource>();
+            greenSoundSource.volume = 0.5f;
         }
         catch (System.NullReferenceException e)
         {

@@ -49,12 +49,14 @@ public class player : MonoBehaviour {
     private AudioSource playerJumpSound;
     private Renderer[] playerRenders;
     private Material[] playerMaterials;
+    private int sceneIndex;
     void Awake()
     {
         Time.timeScale = 1f;
         playerJumpSound = GetComponent<AudioSource>();
         points = 0;
         playerRenders = gameObject.GetComponentsInChildren<Renderer>();
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
     void Start () {
         Time.timeScale = 1f;
@@ -99,13 +101,9 @@ public class player : MonoBehaviour {
 
     void FixedUpdate()
     {
+        
         float distanceToMove = playerSpeed * Time.deltaTime;
         transform.Translate(dir * distanceToMove);
-        if (transform.position.y <= levelBottom)
-        {
-            Debug.Log("Dead");
-        }
-
 
         //anim stuff
         float yVel = playerRigidBody.velocity.y;
@@ -140,7 +138,7 @@ public class player : MonoBehaviour {
         }
         if (!Input.GetKey("z") && heat >= 0)
         {
-            heat = heat - .6f;
+            heat = heat - .1f;
             //Debug.Log("heat =" + heat);
         }
 
@@ -163,7 +161,14 @@ public class player : MonoBehaviour {
 	IEnumerator Wait()
 	{
 		yield return new WaitForSeconds(3.0f);
-		SceneManager.LoadScene ("Sport N Bass");
+        if(sceneIndex == 4 )
+        {
+            SceneManager.LoadScene("Sport N Bass");
+        }
+		else if (sceneIndex == 5)
+        {
+            SceneManager.LoadScene("Sport N Bass chaos");
+        }
 	}
 
 
