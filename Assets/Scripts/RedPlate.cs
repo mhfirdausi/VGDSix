@@ -20,6 +20,7 @@ public class RedPlate : MonoBehaviour
     private MusicLevelController musicController;
     private Coroutine redPlateCoroutine;
     private AudioSource redSoundSource;
+    private player currentPlayer;
 
     void Awake()
     {
@@ -30,6 +31,7 @@ public class RedPlate : MonoBehaviour
         {
             musicController = GameObject.FindGameObjectWithTag("MusicController").GetComponent<MusicLevelController>();
             playerRigidBody = GameObject.Find("playerCylinder").GetComponent<Rigidbody>();
+            currentPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
             redSoundSource = GetComponent<AudioSource>();
         }
         catch (System.NullReferenceException e)
@@ -44,6 +46,7 @@ public class RedPlate : MonoBehaviour
         if (speedChange == true && player.greenPower == true && withinBounds())
         {
             player.playerSpeed = speedBoost;
+            currentPlayer.RenderGreen();
             if (redPlateCoroutine != null)
                 StopCoroutine(redPlateCoroutine);
             redPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
@@ -61,6 +64,7 @@ public class RedPlate : MonoBehaviour
         else if (speedChange == true)
         {
             player.playerSpeed = speedNerf;
+            currentPlayer.RenderRed();
             redPlateCoroutine = StartCoroutine(speedChangeTimerMethod());
             if (musicController.canSlowDown)
             {
@@ -83,6 +87,7 @@ public class RedPlate : MonoBehaviour
 
     void speedChangeUndo()
     {
+        currentPlayer.RenderNormal();
         speedChange = false;
         player.playerSpeed = baseSpeed;
         if (musicController.canResumeNormal)

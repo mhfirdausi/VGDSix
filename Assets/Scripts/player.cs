@@ -47,11 +47,14 @@ public class player : MonoBehaviour {
     public UnityEvent onPlayerQuit;
 
     private AudioSource playerJumpSound;
-
+    private Renderer[] playerRenders;
+    private Material[] playerMaterials;
     void Awake()
     {
+        Time.timeScale = 1f;
         playerJumpSound = GetComponent<AudioSource>();
         points = 0;
+        playerRenders = gameObject.GetComponentsInChildren<Renderer>();
     }
     void Start () {
         Time.timeScale = 1f;
@@ -68,10 +71,6 @@ public class player : MonoBehaviour {
     }
 
     void Update() {
-
-       
-        
-
         //jump
         if (Input.GetKeyDown(KeyCode.Space) && !(Input.GetKey("z")))
         {
@@ -110,8 +109,6 @@ public class player : MonoBehaviour {
 
         //anim stuff
         float yVel = playerRigidBody.velocity.y;
-        animator.SetFloat("yVelocity", yVel);
-        animator.SetBool("isFalling", isFalling);
         if (playerRigidBody.velocity.y < 0 || playerRigidBody.velocity.y > 0)
         {
             isFalling = true;
@@ -120,6 +117,9 @@ public class player : MonoBehaviour {
         {
             isFalling = false;
         }
+        animator.SetFloat("yVelocity", yVel);
+        animator.SetBool("isFalling", isFalling);
+
         //Debug.Log(playerRigidBody.velocity.y);
         
 
@@ -190,7 +190,32 @@ public class player : MonoBehaviour {
 	void onVictory()
 	{
 		VictoryMenu.enabled = true;
+        Time.timeScale = 0f;
 	}
+
+    public void RenderRed()
+    {
+        foreach(Renderer r in playerRenders)
+        {
+            r.material.color = Color.red;
+        }
+    }
+
+    public void RenderGreen()
+    {
+        foreach (Renderer r in playerRenders)
+        {
+            r.material.color = Color.green;
+        }
+    }
+
+    public void RenderNormal()
+    {
+        foreach (Renderer r in playerRenders)
+        {
+            r.material.color = Color.white;
+        }
+    }
 
     void OnCollisionStay()
     {

@@ -174,9 +174,10 @@ public class MusicLevelController : MonoBehaviour {
         }
     }
 
-    public void playSongAtPosition(float position)
+    public void playSongAtPosition()
     {
-
+        volumeTweak = StartCoroutine(FastFade());
+        currentSource.time = DeterminePosition();
     }
 
     private float DeterminePosition()
@@ -188,17 +189,17 @@ public class MusicLevelController : MonoBehaviour {
     {
         float startTime = Time.time;
         float startVolume = currentSource.volume;
-        while (Time.time < startTime + .1f)
+        while (Time.time < startTime + .05f)
         {
-            currentSource.volume = startVolume - (Time.time - startTime) / .1f;
+            currentSource.volume = startVolume - (Time.time - startTime) / .05f;
             yield return null;
         }
 
         startTime = Time.time;
         
-        while (Time.time < startTime + .1f)
+        while (Time.time < startTime + .05f)
         {
-            currentSource.volume = 0  + (Time.time - startTime) / .1f;
+            currentSource.volume = 0  + (Time.time - startTime) / .05f;
             yield return null;
         }
         yield return null;
