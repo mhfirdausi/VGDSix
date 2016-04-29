@@ -15,5 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/tutorial.unity
   - enabled: 1
     path: Assets/Scenes/Sport N Bass.unity
+  - enabled: 1
+    path: Assets/Scenes/Sport N Bass chaos.unity
   - enabled: 0
     path: Assets/Scenes/LevelSel2.unity
