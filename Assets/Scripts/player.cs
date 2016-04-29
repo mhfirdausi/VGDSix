@@ -51,6 +51,7 @@ public class player : MonoBehaviour {
     void Awake()
     {
         playerJumpSound = GetComponent<AudioSource>();
+        points = 0;
     }
     void Start () {
         Time.timeScale = 1f;
@@ -93,7 +94,7 @@ public class player : MonoBehaviour {
 
 		//Points collection - Turner
 		pointsText.text = points.ToString();
-		pointsText2.text = maxpoints.ToString();
+		pointsText2.text = points.ToString();
         
     }
 
@@ -156,7 +157,6 @@ public class player : MonoBehaviour {
 		if (points > maxpoints) {
 			maxpoints = points;
 		}
-		points = 0;
 		StartCoroutine ("Wait");
 	}
 
@@ -210,9 +210,10 @@ public class player : MonoBehaviour {
             TriggerDeath();
         }
 
-		if (other.gameObject.tag == "GoldCubeFlag")
+		if (other.gameObject.name == "GoldCubeFlag")
 		{
 			onVictory();
+            Debug.Log("victory here");
 		}
     }
 }
