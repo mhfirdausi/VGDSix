@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using System;
 
 
@@ -9,7 +10,11 @@ public class SwapBlock : MonoBehaviour {
     public GameObject slow;
     public GameObject speed;
     public GameObject bounce;
-
+	public Sprite red;
+	public Sprite blue;
+	public Sprite green;
+	public Sprite lblue;
+	public Image basic;
     public static Queue blocks;
     private int cube;
     public int number;
@@ -18,7 +23,8 @@ public class SwapBlock : MonoBehaviour {
     void Start()
     {
         blocks = new Queue();
-
+        if(gameObject.GetComponent<Image>() != null)
+            basic = basic.GetComponent<Image>();
     }
 
     void Update()
@@ -27,7 +33,7 @@ public class SwapBlock : MonoBehaviour {
         {
             number = UnityEngine.Random.Range(0, 3);
             blocks.Enqueue(number);
-
+			QueueIE ();
         }
 
     }
@@ -55,6 +61,22 @@ public class SwapBlock : MonoBehaviour {
 
         }
     }
-		
 
+	//Block queue.
+	void QueueIE() 
+	{
+        Debug.Log("Queue: " + blocks.Peek());
+        if (blocks.Peek().Equals(0)) 
+		{
+			basic.sprite = red;
+		} 
+		else if (blocks.Peek().Equals(1)) 
+		{
+			basic.sprite = green;
+		} 
+		else 
+		{
+			basic.sprite = blue;
+		}
+	}
 }
