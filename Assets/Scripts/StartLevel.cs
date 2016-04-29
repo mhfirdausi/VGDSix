@@ -14,6 +14,7 @@ public class StartLevel : MonoBehaviour {
 	public Canvas soonMenu;
 	public Canvas startTut;
 	public Canvas startEDM;
+	public Canvas startEDMChaos;
 	public Canvas startSoon;
 	public Image tutImage;
 	public Image EDMImage;
@@ -40,6 +41,7 @@ public class StartLevel : MonoBehaviour {
 		selectLevel.enabled = true;
 		startTut.enabled = false;
 		startEDM.enabled = false;
+		startEDMChaos.enabled = false;
 		startSoon.enabled = false;
 
 	}
@@ -51,6 +53,7 @@ public class StartLevel : MonoBehaviour {
 		selectLevel.enabled = false;
 		startTut.enabled = false;
 		startEDM.enabled = false;
+		startEDMChaos.enabled = false;
 		startSoon.enabled = false;
 
 		//Opacity modifications.
@@ -74,6 +77,7 @@ public class StartLevel : MonoBehaviour {
 		selectLevel.enabled = false;
 		startTut.enabled = false;
 		startEDM.enabled = false;
+		startEDMChaos.enabled = false;
 		startSoon.enabled = false;
 
 		//Opacity modifications.
@@ -97,6 +101,7 @@ public class StartLevel : MonoBehaviour {
 		selectLevel.enabled = false;
 		startTut.enabled = false;
 		startEDM.enabled = false;
+		startEDMChaos.enabled = false;
 		startSoon.enabled = false;
 
 		//Opacity modifications.
@@ -134,6 +139,13 @@ public class StartLevel : MonoBehaviour {
 		startSoon.enabled = true;
 	}
 
+	public void startEDMChaosScreen()
+	{
+		//startTut.enabled = false;
+		startEDMChaos.enabled = true;
+		//startSoon.enabled = false;
+	}
+
 	public void loadMain()
 	{
 		SceneManager.LoadScene ("Sport N Bass");
@@ -145,6 +157,13 @@ public class StartLevel : MonoBehaviour {
 		SceneManager.LoadScene ("tutorial");
 
 	}
+
+	public void loadChaos()
+	{
+		SceneManager.LoadScene ("Sport N Bass chaos");
+
+	}
+
 
 	public void mainMenu()
 	{
